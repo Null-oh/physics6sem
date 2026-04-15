@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://b43jswfldrn5a"]
+
+[ext_resource type="Texture2D" uid="uid://ydxlmtylswsb" path="res://img/tile.png" id="1_hbrn4"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pohch"]
+texture = ExtResource("1_hbrn4")
+texture_region_size = Vector2i(100, 100)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_31rdc"]
+tile_size = Vector2i(100, 100)
+sources/0 = SubResource("TileSetAtlasSource_pohch")
+
+[node name="2dTiles" type="TileMap"]
+texture_filter = 1
+tile_set = SubResource("TileSet_31rdc")
+format = 2

@@ -1,0 +1,196 @@
+[gd_scene load_steps=2 format=3 uid="uid://ds5ptbdsybly5"]
+
+[ext_resource type="Script" path="res://info.gd" id="1_nuis5"]
+
+[node name="info" type="CanvasLayer"]
+script = ExtResource("1_nuis5")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -170.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 15
+
+[node name="exit" type="Button" parent="ColorRect/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/h_separation = 15
+text = " Выход "
+
+[node name="speed" type="VBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="speedX" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/speed"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/speed/speedX"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = " Vx: "
+
+[node name="speedXLine" type="LineEdit" parent="ColorRect/MarginContainer/HBoxContainer/speed/speedX"]
+layout_mode = 2
+placeholder_text = "0"
+
+[node name="speedXValue" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/speed/speedX"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="speedY" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/speed"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/speed/speedY"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = " Vy: "
+
+[node name="speedYLine" type="LineEdit" parent="ColorRect/MarginContainer/HBoxContainer/speed/speedY"]
+layout_mode = 2
+placeholder_text = "0"
+
+[node name="speedYValue" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/speed/speedY"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="speedZ" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/speed"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/speed/speedZ"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = " Vz: "
+
+[node name="speedZLine" type="LineEdit" parent="ColorRect/MarginContainer/HBoxContainer/speed/speedZ"]
+layout_mode = 2
+placeholder_text = "0"
+
+[node name="speedZValue" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/speed/speedZ"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="basic" type="VBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="acceleration" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/basic"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/basic/acceleration"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = " a: "
+
+[node name="accelLine" type="LineEdit" parent="ColorRect/MarginContainer/HBoxContainer/basic/acceleration"]
+layout_mode = 2
+placeholder_text = "0"
+
+[node name="distance" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/basic"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/basic/distance"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = " S: "
+
+[node name="distValue" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/basic/distance"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="speed" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/basic"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/basic/speed"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = " V: "
+
+[node name="speedValue" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/basic/speed"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="coords" type="VBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="coordX" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/coords"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/coords/coordX"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = " x: "
+
+[node name="xValue" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/coords/coordX"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="coordY" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/coords"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/coords/coordY"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = " y: "
+
+[node name="yValue" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/coords/coordY"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="coordZ" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer/coords"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/coords/coordZ"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = " z: "
+
+[node name="zValue" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/coords/coordZ"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="buttons" type="HBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="reset" type="Button" parent="ColorRect/MarginContainer/HBoxContainer/buttons"]
+layout_mode = 2
+size_flags_vertical = 4
+text = " Сброс "
+
+[node name="start" type="Button" parent="ColorRect/MarginContainer/HBoxContainer/buttons"]
+layout_mode = 2
+size_flags_vertical = 4
+text = " Запуск "
+
+[node name="stop" type="Button" parent="ColorRect/MarginContainer/HBoxContainer/buttons"]
+layout_mode = 2
+size_flags_vertical = 4
+text = " Стоп "
+
+[connection signal="pressed" from="ColorRect/MarginContainer/HBoxContainer/exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="ColorRect/MarginContainer/HBoxContainer/buttons/reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="ColorRect/MarginContainer/HBoxContainer/buttons/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="ColorRect/MarginContainer/HBoxContainer/buttons/stop" to="." method="_on_stop_pressed"]

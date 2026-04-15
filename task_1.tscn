@@ -1,0 +1,210 @@
+[gd_scene load_steps=4 format=3 uid="uid://doaibysg734rw"]
+
+[ext_resource type="Texture2D" uid="uid://fl02e5sarrx0" path="res://img/ball.png" id="1_1e8a0"]
+[ext_resource type="Script" path="res://task_1.gd" id="1_6fiml"]
+[ext_resource type="PackedScene" uid="uid://b43jswfldrn5a" path="res://2d_tiles.tscn" id="1_o1wyn"]
+
+[node name="task1" type="Node2D"]
+script = ExtResource("1_6fiml")
+
+[node name="2dTiles" parent="." instance=ExtResource("1_o1wyn")]
+layer_0/tile_data = PackedInt32Array(-131078, 0, 0, -65542, 0, 0, -6, 0, 0, 65530, 0, 0, 131066, 0, 0, 196602, 0, 0, -131077, 0, 0, -131076, 0, 0, -131075, 0, 0, -131074, 0, 0, -131073, 0, 0, -196608, 0, 0, -196607, 0, 0, -196606, 0, 0, -196605, 0, 0, -196604, 0, 0, -196603, 0, 0, -65541, 0, 0, -65540, 0, 0, -65539, 0, 0, -65538, 0, 0, -65537, 0, 0, -131072, 0, 0, -131071, 0, 0, -131070, 0, 0, -131069, 0, 0, -131068, 0, 0, -131067, 0, 0, -65531, 0, 0, -65532, 0, 0, -65533, 0, 0, -65534, 0, 0, -65535, 0, 0, -65536, 0, 0, -1, 0, 0, -2, 0, 0, -3, 0, 0, -4, 0, 0, -5, 0, 0, 65531, 0, 0, 65532, 0, 0, 65533, 0, 0, 65534, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 4, 0, 0, 5, 0, 0, 3, 0, 0, 65540, 0, 0, 65541, 0, 0, 65539, 0, 0, 65538, 0, 0, 65537, 0, 0, 65536, 0, 0, 131071, 0, 0, 131070, 0, 0, 131069, 0, 0, 131068, 0, 0, 131067, 0, 0, 196603, 0, 0, 196604, 0, 0, 196605, 0, 0, 196606, 0, 0, 196607, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 196613, 0, 0, 196612, 0, 0, 196611, 0, 0, 196610, 0, 0, 196609, 0, 0, 196608, 0, 0, 262143, 0, 0, 262142, 0, 0, 262141, 0, 0, 262140, 0, 0, 262139, 0, 0, 262138, 0, 0, -196614, 0, 0, -196613, 0, 0, -196612, 0, 0, -196611, 0, 0, -196610, 0, 0, -196609, 0, 0, -262144, 0, 0, -262143, 0, 0, -262142, 0, 0, -262141, 0, 0, -262140, 0, 0, -262139, 0, 0)
+
+[node name="ball" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_1e8a0")
+
+[node name="Camera2D" type="Camera2D" parent="ball"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="info" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -180.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/info"]
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/info/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 70
+
+[node name="exit" type="Button" parent="CanvasLayer/info/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 32
+text = " Выйти "
+
+[node name="basic" type="VBoxContainer" parent="CanvasLayer/info/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="speedX" type="HBoxContainer" parent="CanvasLayer/info/MarginContainer/HBoxContainer/basic"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="speedXLabel" type="Label" parent="CanvasLayer/info/MarginContainer/HBoxContainer/basic/speedX"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Vx:"
+
+[node name="speedXValue" type="LineEdit" parent="CanvasLayer/info/MarginContainer/HBoxContainer/basic/speedX"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+placeholder_text = "0"
+
+[node name="speedX" type="Label" parent="CanvasLayer/info/MarginContainer/HBoxContainer/basic/speedX"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+
+[node name="speedY2" type="HBoxContainer" parent="CanvasLayer/info/MarginContainer/HBoxContainer/basic"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="speedYLabel" type="Label" parent="CanvasLayer/info/MarginContainer/HBoxContainer/basic/speedY2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Vy:"
+
+[node name="speedYValue" type="LineEdit" parent="CanvasLayer/info/MarginContainer/HBoxContainer/basic/speedY2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+placeholder_text = "0"
+
+[node name="speedY" type="Label" parent="CanvasLayer/info/MarginContainer/HBoxContainer/basic/speedY2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+
+[node name="accel" type="HBoxContainer" parent="CanvasLayer/info/MarginContainer/HBoxContainer/basic"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 16
+
+[node name="accelLabel" type="Label" parent="CanvasLayer/info/MarginContainer/HBoxContainer/basic/accel"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "a:"
+
+[node name="accelValue" type="LineEdit" parent="CanvasLayer/info/MarginContainer/HBoxContainer/basic/accel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+placeholder_text = "0"
+
+[node name="coords" type="VBoxContainer" parent="CanvasLayer/info/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="xcoord" type="HBoxContainer" parent="CanvasLayer/info/MarginContainer/HBoxContainer/coords"]
+layout_mode = 2
+
+[node name="xLable" type="Label" parent="CanvasLayer/info/MarginContainer/HBoxContainer/coords/xcoord"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "X:"
+
+[node name="xValue" type="Label" parent="CanvasLayer/info/MarginContainer/HBoxContainer/coords/xcoord"]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+
+[node name="ycoord" type="HBoxContainer" parent="CanvasLayer/info/MarginContainer/HBoxContainer/coords"]
+layout_mode = 2
+
+[node name="yLabel" type="Label" parent="CanvasLayer/info/MarginContainer/HBoxContainer/coords/ycoord"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Y:"
+
+[node name="yValue" type="Label" parent="CanvasLayer/info/MarginContainer/HBoxContainer/coords/ycoord"]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+
+[node name="distance" type="HBoxContainer" parent="CanvasLayer/info/MarginContainer/HBoxContainer/coords"]
+layout_mode = 2
+
+[node name="distanceLabel" type="Label" parent="CanvasLayer/info/MarginContainer/HBoxContainer/coords/distance"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "S:"
+
+[node name="distanceValue" type="Label" parent="CanvasLayer/info/MarginContainer/HBoxContainer/coords/distance"]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+
+[node name="end" type="VBoxContainer" parent="CanvasLayer/info/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="speed" type="HBoxContainer" parent="CanvasLayer/info/MarginContainer/HBoxContainer/end"]
+layout_mode = 2
+
+[node name="speedLabel" type="Label" parent="CanvasLayer/info/MarginContainer/HBoxContainer/end/speed"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "V:"
+
+[node name="speedValue" type="Label" parent="CanvasLayer/info/MarginContainer/HBoxContainer/end/speed"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+
+[node name="buttons" type="HBoxContainer" parent="CanvasLayer/info/MarginContainer/HBoxContainer/end"]
+layout_mode = 2
+
+[node name="reset" type="Button" parent="CanvasLayer/info/MarginContainer/HBoxContainer/end/buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 32
+text = " Сброс "
+
+[node name="go" type="Button" parent="CanvasLayer/info/MarginContainer/HBoxContainer/end/buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 32
+text = " Запуск"
+
+[node name="pause" type="Button" parent="CanvasLayer/info/MarginContainer/HBoxContainer/end/buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 32
+text = " Стоп "
+
+[connection signal="pressed" from="CanvasLayer/info/MarginContainer/HBoxContainer/exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="CanvasLayer/info/MarginContainer/HBoxContainer/end/buttons/reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="CanvasLayer/info/MarginContainer/HBoxContainer/end/buttons/go" to="." method="_on_go_pressed"]
+[connection signal="pressed" from="CanvasLayer/info/MarginContainer/HBoxContainer/end/buttons/pause" to="." method="_on_pause_pressed"]

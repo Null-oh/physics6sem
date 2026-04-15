@@ -1,0 +1,52 @@
+[gd_scene load_steps=9 format=3 uid="uid://bkc2fupt4pedi"]
+
+[ext_resource type="Script" path="res://task_2.gd" id="1_8i1t5"]
+[ext_resource type="PackedScene" uid="uid://ds5ptbdsybly5" path="res://info.tscn" id="1_j8xr8"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_if0dt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r6aos"]
+metallic = 0.3
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ruq51"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_umnsu"]
+albedo_color = Color(0.886275, 0.623529, 0.807843, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_412eu"]
+albedo_color = Color(0.6, 0.984314, 0.764706, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7elj1"]
+albedo_color = Color(0.219608, 0.654902, 1, 1)
+
+[node name="task2" type="Node3D"]
+script = ExtResource("1_8i1t5")
+
+[node name="ball" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_if0dt")
+surface_material_override/0 = SubResource("StandardMaterial3D_r6aos")
+
+[node name="Camera3D" type="Camera3D" parent="ball"]
+transform = Transform3D(0.707107, -0.298836, 0.640856, 0, 0.906308, 0.422618, -0.707107, -0.298836, 0.640856, 10, 5, 10)
+
+[node name="xy" type="MeshInstance3D" parent="."]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
+mesh = SubResource("PlaneMesh_ruq51")
+surface_material_override/0 = SubResource("StandardMaterial3D_umnsu")
+
+[node name="xz" type="MeshInstance3D" parent="."]
+transform = Transform3D(50, 0, 0, 0, -2.18557e-06, -50, 0, 50, -2.18557e-06, 0, 0, 0)
+mesh = SubResource("PlaneMesh_ruq51")
+surface_material_override/0 = SubResource("StandardMaterial3D_412eu")
+
+[node name="yz" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.18557e-06, 50, -2.18557e-06, 0, -2.18557e-06, -50, -50, -2.18557e-06, 9.55343e-14, 0, 0, 0)
+mesh = SubResource("PlaneMesh_ruq51")
+surface_material_override/0 = SubResource("StandardMaterial3D_7elj1")
+
+[node name="light" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.707107, -0.40558, 0.579228, 0, 0.819152, 0.573576, -0.707107, -0.40558, 0.579228, 49.6255, 48.6432, 49.248)
+
+[node name="info" parent="." instance=ExtResource("1_j8xr8")]
+
+[node name="grid" type="Node3D" parent="."]
