@@ -78,8 +78,6 @@ func write():
 		speedYLine.text = str(snapped(speedY, 0.01))
 	distanceLabel.text = str(snapped(distance, 0.01))
 	speedLabel.text = str(snapped(speed, 0.01))
-	
-
 
 func _on_exit_pressed():
 	get_tree().change_scene_to_file("res://start.tscn")

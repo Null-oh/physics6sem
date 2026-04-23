@@ -3,7 +3,7 @@ extends Node2D
 
 
 func _on_task_1_pressed():
-	get_tree().change_scene_to_file("res://task_1.tscn")
+	get_tree().change_scene_to_file("res://one/task_1_2.tscn")
 
 
 func _on_task_2_pressed():
