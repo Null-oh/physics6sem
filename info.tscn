@@ -190,7 +190,13 @@ layout_mode = 2
 size_flags_vertical = 4
 text = " Стоп "
 
+[node name="exit" type="Button" parent="ColorRect/MarginContainer/HBoxContainer/buttons"]
+layout_mode = 2
+size_flags_vertical = 4
+text = " Выход "
+
 [connection signal="pressed" from="ColorRect/MarginContainer/HBoxContainer/exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="ColorRect/MarginContainer/HBoxContainer/buttons/reset" to="." method="_on_reset_pressed"]
 [connection signal="pressed" from="ColorRect/MarginContainer/HBoxContainer/buttons/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="ColorRect/MarginContainer/HBoxContainer/buttons/stop" to="." method="_on_stop_pressed"]
+[connection signal="pressed" from="ColorRect/MarginContainer/HBoxContainer/buttons/exit" to="." method="_on_exit_pressed"]

@@ -8,3 +8,7 @@ func _on_task_1_pressed():
 
 func _on_task_2_pressed():
 	get_tree().change_scene_to_file("res://task_2.tscn")
+
+
+func _on_three_pressed():
+	get_tree().change_scene_to_file("res://three/three.tscn")
