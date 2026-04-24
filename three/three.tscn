@@ -208,6 +208,7 @@ text = " t = "
 [node name="tvalue" type="Label" parent="info/back/MarginContainer/HBoxContainer/out/t"]
 custom_minimum_size = Vector2(130, 0)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 
 [node name="s" type="HBoxContainer" parent="info/back/MarginContainer/HBoxContainer/out"]
@@ -223,6 +224,7 @@ text = " s(t2) = "
 [node name="svalue" type="Label" parent="info/back/MarginContainer/HBoxContainer/out/s"]
 custom_minimum_size = Vector2(130, 0)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 
 [node name="v" type="HBoxContainer" parent="info/back/MarginContainer/HBoxContainer/out"]
@@ -238,6 +240,7 @@ text = " v(t3) = "
 [node name="vvalue" type="Label" parent="info/back/MarginContainer/HBoxContainer/out/v"]
 custom_minimum_size = Vector2(130, 0)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 
 [node name="a" type="HBoxContainer" parent="info/back/MarginContainer/HBoxContainer/out"]
@@ -253,6 +256,7 @@ text = " a(t3) = "
 [node name="avalue" type="Label" parent="info/back/MarginContainer/HBoxContainer/out/a"]
 custom_minimum_size = Vector2(130, 0)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 
 [node name="buttons" type="VBoxContainer" parent="info/back/MarginContainer/HBoxContainer"]

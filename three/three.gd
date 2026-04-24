@@ -59,13 +59,17 @@ func _ready():
 func _process(delta):
 	if not simulation: return
 	
+	x += vx * delta
+	y += vy * delta
+	
 	if t < t2:
 		t += delta
+		
 		#ax = a + b*t
 		#ay = c + d*t
 		
-		x += vx * delta
-		y += vy * delta
+		#x += vx * delta
+		#y += vy * delta
 		
 		if t >= t1:
 			vx += accelx * delta
@@ -159,10 +163,13 @@ func get_lines(line_edit: LineEdit, default: float = 0.0) -> float:
 
 func _on_start_pressed():
 	read()
+	vx = vx0
+	vy = vy0
 	v = sqrt(vx**2 + vy**2)
 	t = 0
 	x = 0
 	y = 0
+	s = 0
 	simulation = true
 
 func _on_stop_pressed():
