@@ -63,6 +63,27 @@ text = "3)"
 layout_mode = 2
 text = "Задания 1, 2"
 
+[node name="fourth" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="4" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/fourth"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "4)"
+
+[node name="four-one" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/fourth"]
+layout_mode = 2
+text = "Задание 1"
+
+[node name="four-two" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/fourth"]
+layout_mode = 2
+text = "Задание 2"
+
+[node name="four-three" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/fourth"]
+layout_mode = 2
+text = "Задание 3"
+
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/first/task1" to="." method="_on_task_1_pressed"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/first/task2" to="." method="_on_task_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/third/three" to="." method="_on_three_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/fourth/four-one" to="." method="_on_fourone_pressed"]
