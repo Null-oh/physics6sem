@@ -12,3 +12,11 @@ func _on_task_2_pressed():
 
 func _on_three_pressed():
 	get_tree().change_scene_to_file("res://three/three.tscn")
+
+
+func _on_fourone_pressed():
+	get_tree().change_scene_to_file("res://four/four-one.tscn")
+
+
+func _on_fourtwo_pressed():
+	get_tree().change_scene_to_file("res://four/four-two.tscn")

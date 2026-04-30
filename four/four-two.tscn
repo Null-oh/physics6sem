@@ -1,0 +1,303 @@
+[gd_scene load_steps=8 format=3 uid="uid://dhcjv045varrh"]
+
+[ext_resource type="Script" path="res://four/four-two.gd" id="1_l0m5t"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_x2vmd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x3rtt"]
+metallic = 0.3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0jk8p"]
+transparency = 1
+albedo_color = Color(0.6, 0.984314, 0.764706, 0.588235)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wx2ws"]
+material = SubResource("StandardMaterial3D_0jk8p")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u1euu"]
+albedo_color = Color(0.886275, 0.623529, 0.807843, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8b42l"]
+transparency = 1
+albedo_color = Color(0.219608, 0.654902, 1, 0.588235)
+
+[node name="Four-two" type="Node3D"]
+script = ExtResource("1_l0m5t")
+
+[node name="ball" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_x2vmd")
+surface_material_override/0 = SubResource("StandardMaterial3D_x3rtt")
+
+[node name="xy" type="MeshInstance3D" parent="."]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
+mesh = SubResource("PlaneMesh_wx2ws")
+surface_material_override/0 = SubResource("StandardMaterial3D_u1euu")
+
+[node name="xz" type="MeshInstance3D" parent="."]
+transform = Transform3D(50, 0, 0, 0, -2.18557e-06, -50, 0, 50, -2.18557e-06, 0, 50, 0)
+mesh = SubResource("PlaneMesh_wx2ws")
+
+[node name="yz" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.18557e-06, 50, -2.18557e-06, 0, -2.18557e-06, -50, -50, -2.18557e-06, 9.55343e-14, 0, 50, 0)
+mesh = SubResource("PlaneMesh_wx2ws")
+surface_material_override/0 = SubResource("StandardMaterial3D_8b42l")
+
+[node name="light" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.707107, -0.40558, 0.579228, 0, 0.819152, 0.573576, -0.707107, -0.40558, 0.579228, 49.6255, 48.6432, 49.248)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 20, 15, 20)
+
+[node name="info" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="info"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.854902, 0.854902, 0.854902, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="info/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="info/ColorRect/MarginContainer"]
+layout_mode = 2
+
+[node name="current" type="VBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="curX" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/current"]
+layout_mode = 2
+
+[node name="x" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/current/curX"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = " x(t1) = "
+
+[node name="xvalue" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/current/curX"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+
+[node name="curY" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/current"]
+layout_mode = 2
+
+[node name="y" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/current/curY"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = " y(t1) = "
+
+[node name="yvalue" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/current/curY"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+
+[node name="curZ" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/current"]
+layout_mode = 2
+
+[node name="z" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/current/curZ"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = " z(t1) = "
+
+[node name="zvalue" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/current/curZ"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+
+[node name="S" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/current"]
+layout_mode = 2
+
+[node name="s" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/current/S"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = " S(t1) = "
+
+[node name="svalue" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/current/S"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+
+[node name="input" type="VBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+
+[node name="t1" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/input"]
+layout_mode = 2
+
+[node name="t1" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/input/t1"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = " t1 = "
+
+[node name="t1value" type="LineEdit" parent="info/ColorRect/MarginContainer/HBoxContainer/input/t1"]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="v" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/input"]
+layout_mode = 2
+
+[node name="v" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/input/v"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = " v = "
+
+[node name="vvalue" type="LineEdit" parent="info/ColorRect/MarginContainer/HBoxContainer/input/v"]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="r" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/input"]
+layout_mode = 2
+
+[node name="r" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/input/r"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = " R = "
+
+[node name="rvalue" type="LineEdit" parent="info/ColorRect/MarginContainer/HBoxContainer/input/r"]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="input2" type="VBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+
+[node name="a" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/input2"]
+layout_mode = 2
+
+[node name="a" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/input2/a"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = " A = "
+
+[node name="avalue" type="LineEdit" parent="info/ColorRect/MarginContainer/HBoxContainer/input2/a"]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="b" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/input2"]
+layout_mode = 2
+
+[node name="b" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/input2/b"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = " B = "
+
+[node name="bvalue" type="LineEdit" parent="info/ColorRect/MarginContainer/HBoxContainer/input2/b"]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="accel" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/input2"]
+layout_mode = 2
+
+[node name="accel" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/input2/accel"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = " a = "
+
+[node name="accelvalue" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/input2/accel"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+
+[node name="t" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="t" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/t"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = " t = "
+
+[node name="tvalue" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/t"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+
+[node name="VBoxContainer" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="buttons" type="VBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="stop" type="Button" parent="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer/buttons"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = " СТОП "
+
+[node name="go" type="Button" parent="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer/buttons"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = " ПУСК "
+
+[node name="buttons2" type="VBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="exit" type="Button" parent="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer/buttons2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = " ВЫХОД "
+
+[node name="reset" type="Button" parent="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer/buttons2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = " СБРОС"
+
+[connection signal="pressed" from="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer/buttons/stop" to="." method="_on_stop_pressed"]
+[connection signal="pressed" from="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer/buttons/go" to="." method="_on_go_pressed"]
+[connection signal="pressed" from="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer/buttons2/exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer/buttons2/reset" to="." method="_on_reset_pressed"]
