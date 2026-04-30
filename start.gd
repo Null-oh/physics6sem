@@ -15,7 +15,7 @@ func _on_three_pressed():
 
 
 func _on_fourone_pressed():
-	get_tree().change_scene_to_file("res://four/four-one.tscn")
+	get_tree().change_scene_to_file("res://four/four_one_two.tscn")
 
 
 func _on_fourtwo_pressed():

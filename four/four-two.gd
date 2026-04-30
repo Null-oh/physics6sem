@@ -15,6 +15,7 @@ extends Node3D
 @onready var tvalue = $info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/t/tvalue
 @onready var svalue = $info/ColorRect/MarginContainer/HBoxContainer/current/S/svalue
 @onready var accelvalue = $info/ColorRect/MarginContainer/HBoxContainer/input2/accel/accelvalue
+@onready var alphavalue = $info/ColorRect/MarginContainer/HBoxContainer/input2/alpha/alphavalue
 
 var v : float
 var t1 : float
@@ -28,6 +29,8 @@ var z : float
 var t : float
 var s : float
 var accel : float
+
+var alpha : float
 
 var simulation : bool = false
 
@@ -61,6 +64,8 @@ func _process(delta):
 		x = r * cos(t)
 		z = r * sin(t)
 		
+		alpha = rad_to_deg(atan2(z, x))
+		
 		ball.position = Vector3(x, y, z)
 		
 		write()
@@ -77,6 +82,7 @@ func write():
 	tvalue.text = str(snapped(t, 0.1))
 	svalue.text = str(snapped(s, 0.01))
 	accelvalue.text = str(snapped(accel, 0.01))
+	alphavalue.text = str(snapped(alpha, 0.01))
 
 func read():
 	v = get_lines(vline)
