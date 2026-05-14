@@ -1,13 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://bi26ctq20qsq1"]
+[gd_scene format=3 uid="uid://bi26ctq20qsq1"]
 
-[ext_resource type="Script" path="res://start.gd" id="1_gw5ns"]
+[ext_resource type="Script" uid="uid://b7sfdjit8btrp" path="res://start.gd" id="1_gw5ns"]
 
-[node name="start" type="Node2D"]
+[node name="start" type="Node2D" unique_id=2075771239]
 script = ExtResource("1_gw5ns")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1979519108]
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=554579930]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -20,7 +20,7 @@ offset_bottom = 250.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/ColorRect"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/ColorRect" unique_id=1145762762]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -32,55 +32,76 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer" unique_id=1407292772]
 layout_mode = 2
 
-[node name="first" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2"]
+[node name="first" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2" unique_id=580739958]
 layout_mode = 2
 
-[node name="1" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/first"]
+[node name="1" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/first" unique_id=538811731]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "1)"
 
-[node name="task1" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/first"]
+[node name="task1" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/first" unique_id=1624874301]
 layout_mode = 2
 text = "Задание 1"
 
-[node name="task2" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/first"]
+[node name="task2" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/first" unique_id=1045394716]
 layout_mode = 2
 text = "Задание 2"
 
-[node name="third" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2"]
+[node name="third" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2" unique_id=1058637424]
 layout_mode = 2
 
-[node name="2" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/third"]
+[node name="2" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/third" unique_id=1968076950]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "3)"
 
-[node name="three" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/third"]
+[node name="three" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/third" unique_id=945387171]
 layout_mode = 2
 text = "Задания 1, 2"
 
-[node name="fourth" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2"]
+[node name="fourth" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2" unique_id=1012269779]
 layout_mode = 2
 
-[node name="4" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/fourth"]
+[node name="4" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/fourth" unique_id=777467768]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "4)"
 
-[node name="four-one" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/fourth"]
+[node name="four-one" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/fourth" unique_id=411457408]
 layout_mode = 2
 text = "Задание 1"
 
-[node name="four-two" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/fourth"]
+[node name="four-two" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/fourth" unique_id=1414827814]
 layout_mode = 2
 text = "Задание 2 (1, 2)"
+
+[node name="fifth" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2" unique_id=429082364]
+layout_mode = 2
+
+[node name="5" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/fifth" unique_id=1547558044]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "5)"
+
+[node name="five-one" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/fifth" unique_id=391496640]
+layout_mode = 2
+text = "Задание 1"
+
+[node name="five-two" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/fifth" unique_id=742009541]
+layout_mode = 2
+text = "Задание 2 "
+
+[node name="five-three" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/fifth" unique_id=1640736325]
+layout_mode = 2
+text = "Задание 3 "
 
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/first/task1" to="." method="_on_task_1_pressed"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/first/task2" to="." method="_on_task_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/third/three" to="." method="_on_three_pressed"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/fourth/four-one" to="." method="_on_fourone_pressed"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/fourth/four-two" to="." method="_on_fourtwo_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/fifth/five-one" to="." method="_on_fiveone_pressed"]

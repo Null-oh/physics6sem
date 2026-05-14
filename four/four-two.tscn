@@ -1,6 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://dhcjv045varrh"]
+[gd_scene format=3 uid="uid://dhcjv045varrh"]
 
-[ext_resource type="Script" path="res://four/four-two.gd" id="1_l0m5t"]
+[ext_resource type="Script" uid="uid://b68jryhfxqcqt" path="res://four/four-two.gd" id="1_l0m5t"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_x2vmd"]
 
@@ -21,36 +21,36 @@ albedo_color = Color(0.886275, 0.623529, 0.807843, 1)
 transparency = 1
 albedo_color = Color(0.219608, 0.654902, 1, 0.588235)
 
-[node name="Four-two" type="Node3D"]
+[node name="Four-two" type="Node3D" unique_id=16821296]
 script = ExtResource("1_l0m5t")
 
-[node name="ball" type="MeshInstance3D" parent="."]
+[node name="ball" type="MeshInstance3D" parent="." unique_id=1363027993]
 mesh = SubResource("SphereMesh_x2vmd")
 surface_material_override/0 = SubResource("StandardMaterial3D_x3rtt")
 
-[node name="xy" type="MeshInstance3D" parent="."]
+[node name="xy" type="MeshInstance3D" parent="." unique_id=244768630]
 transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
 mesh = SubResource("PlaneMesh_wx2ws")
 surface_material_override/0 = SubResource("StandardMaterial3D_u1euu")
 
-[node name="xz" type="MeshInstance3D" parent="."]
+[node name="xz" type="MeshInstance3D" parent="." unique_id=2032089381]
 transform = Transform3D(50, 0, 0, 0, -2.18557e-06, -50, 0, 50, -2.18557e-06, 0, 50, 0)
 mesh = SubResource("PlaneMesh_wx2ws")
 
-[node name="yz" type="MeshInstance3D" parent="."]
+[node name="yz" type="MeshInstance3D" parent="." unique_id=185261453]
 transform = Transform3D(-2.18557e-06, 50, -2.18557e-06, 0, -2.18557e-06, -50, -50, -2.18557e-06, 9.55343e-14, 0, 50, 0)
 mesh = SubResource("PlaneMesh_wx2ws")
 surface_material_override/0 = SubResource("StandardMaterial3D_8b42l")
 
-[node name="light" type="DirectionalLight3D" parent="."]
+[node name="light" type="DirectionalLight3D" parent="." unique_id=508626707]
 transform = Transform3D(0.707107, -0.40558, 0.579228, 0, 0.819152, 0.573576, -0.707107, -0.40558, 0.579228, 49.6255, 48.6432, 49.248)
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1169803096]
 transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 20, 15, 20)
 
-[node name="info" type="CanvasLayer" parent="."]
+[node name="info" type="CanvasLayer" parent="." unique_id=363941667]
 
-[node name="ColorRect" type="ColorRect" parent="info"]
+[node name="ColorRect" type="ColorRect" parent="info" unique_id=1977287663]
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
@@ -60,7 +60,7 @@ grow_horizontal = 2
 grow_vertical = 0
 color = Color(0.854902, 0.854902, 0.854902, 1)
 
-[node name="MarginContainer" type="MarginContainer" parent="info/ColorRect"]
+[node name="MarginContainer" type="MarginContainer" parent="info/ColorRect" unique_id=628618761]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -72,243 +72,243 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="HBoxContainer" type="HBoxContainer" parent="info/ColorRect/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="info/ColorRect/MarginContainer" unique_id=1689918136]
 layout_mode = 2
 
-[node name="current" type="VBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer"]
+[node name="current" type="VBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer" unique_id=2047257670]
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="curX" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/current"]
+[node name="curX" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/current" unique_id=897151335]
 layout_mode = 2
 
-[node name="x" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/current/curX"]
+[node name="x" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/current/curX" unique_id=1490211900]
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = " x(t1) = "
 
-[node name="xvalue" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/current/curX"]
+[node name="xvalue" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/current/curX" unique_id=1416670675]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 
-[node name="curY" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/current"]
+[node name="curY" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/current" unique_id=403810086]
 layout_mode = 2
 
-[node name="y" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/current/curY"]
+[node name="y" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/current/curY" unique_id=252528106]
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = " y(t1) = "
 
-[node name="yvalue" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/current/curY"]
+[node name="yvalue" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/current/curY" unique_id=1024693947]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 
-[node name="curZ" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/current"]
+[node name="curZ" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/current" unique_id=33047592]
 layout_mode = 2
 
-[node name="z" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/current/curZ"]
+[node name="z" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/current/curZ" unique_id=1549711764]
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = " z(t1) = "
 
-[node name="zvalue" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/current/curZ"]
+[node name="zvalue" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/current/curZ" unique_id=894768478]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 
-[node name="S" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/current"]
+[node name="S" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/current" unique_id=219166181]
 layout_mode = 2
 
-[node name="s" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/current/S"]
+[node name="s" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/current/S" unique_id=860547041]
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = " S(t1) = "
 
-[node name="svalue" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/current/S"]
+[node name="svalue" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/current/S" unique_id=224494161]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 
-[node name="input" type="VBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer"]
+[node name="input" type="VBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer" unique_id=285396060]
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/separation = 10
 
-[node name="t1" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/input"]
+[node name="t1" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/input" unique_id=334598132]
 layout_mode = 2
 
-[node name="t1" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/input/t1"]
+[node name="t1" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/input/t1" unique_id=1899382826]
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = " t1 = "
 
-[node name="t1value" type="LineEdit" parent="info/ColorRect/MarginContainer/HBoxContainer/input/t1"]
+[node name="t1value" type="LineEdit" parent="info/ColorRect/MarginContainer/HBoxContainer/input/t1" unique_id=1707426612]
 custom_minimum_size = Vector2(130, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 
-[node name="v" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/input"]
+[node name="v" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/input" unique_id=1479490323]
 layout_mode = 2
 
-[node name="v" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/input/v"]
+[node name="v" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/input/v" unique_id=1273071282]
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = " v = "
 
-[node name="vvalue" type="LineEdit" parent="info/ColorRect/MarginContainer/HBoxContainer/input/v"]
+[node name="vvalue" type="LineEdit" parent="info/ColorRect/MarginContainer/HBoxContainer/input/v" unique_id=535605498]
 custom_minimum_size = Vector2(130, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 
-[node name="r" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/input"]
+[node name="r" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/input" unique_id=347034923]
 layout_mode = 2
 
-[node name="r" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/input/r"]
+[node name="r" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/input/r" unique_id=1686923999]
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = " R = "
 
-[node name="rvalue" type="LineEdit" parent="info/ColorRect/MarginContainer/HBoxContainer/input/r"]
+[node name="rvalue" type="LineEdit" parent="info/ColorRect/MarginContainer/HBoxContainer/input/r" unique_id=1848742283]
 custom_minimum_size = Vector2(130, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 
-[node name="input2" type="VBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer"]
+[node name="input2" type="VBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer" unique_id=802542804]
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/separation = 10
 
-[node name="a" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/input2"]
+[node name="a" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/input2" unique_id=1194380700]
 layout_mode = 2
 
-[node name="a" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/input2/a"]
+[node name="a" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/input2/a" unique_id=1535205589]
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = " A = "
 
-[node name="avalue" type="LineEdit" parent="info/ColorRect/MarginContainer/HBoxContainer/input2/a"]
+[node name="avalue" type="LineEdit" parent="info/ColorRect/MarginContainer/HBoxContainer/input2/a" unique_id=1867819436]
 custom_minimum_size = Vector2(130, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 
-[node name="b" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/input2"]
+[node name="b" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/input2" unique_id=791297825]
 layout_mode = 2
 
-[node name="b" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/input2/b"]
+[node name="b" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/input2/b" unique_id=1690637614]
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = " B = "
 
-[node name="bvalue" type="LineEdit" parent="info/ColorRect/MarginContainer/HBoxContainer/input2/b"]
+[node name="bvalue" type="LineEdit" parent="info/ColorRect/MarginContainer/HBoxContainer/input2/b" unique_id=1050711954]
 custom_minimum_size = Vector2(130, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 
-[node name="accel" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/input2"]
+[node name="accel" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/input2" unique_id=1805093209]
 layout_mode = 2
 
-[node name="accel" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/input2/accel"]
+[node name="accel" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/input2/accel" unique_id=27069853]
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = " a = "
 
-[node name="accelvalue" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/input2/accel"]
+[node name="accelvalue" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/input2/accel" unique_id=612759277]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 
-[node name="alpha" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/input2"]
+[node name="alpha" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/input2" unique_id=1522022858]
 layout_mode = 2
 
-[node name="alpha" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/input2/alpha"]
+[node name="alpha" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/input2/alpha" unique_id=1859470117]
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = " α = "
 
-[node name="alphavalue" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/input2/alpha"]
+[node name="alphavalue" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/input2/alpha" unique_id=1820421336]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer" unique_id=1495225285]
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/separation = 10
 
-[node name="t" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2"]
+[node name="t" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=1919092372]
 layout_mode = 2
 
-[node name="t" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/t"]
+[node name="t" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/t" unique_id=1702169472]
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = " t = "
 
-[node name="tvalue" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/t"]
+[node name="tvalue" type="Label" parent="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/t" unique_id=1072083693]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 
-[node name="VBoxContainer" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2"]
+[node name="VBoxContainer" type="HBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=695574500]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="buttons" type="VBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer"]
+[node name="buttons" type="VBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer" unique_id=1465862970]
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="stop" type="Button" parent="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer/buttons"]
+[node name="stop" type="Button" parent="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer/buttons" unique_id=1181519999]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 text = " СТОП "
 
-[node name="go" type="Button" parent="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer/buttons"]
+[node name="go" type="Button" parent="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer/buttons" unique_id=251219200]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 text = " ПУСК "
 
-[node name="buttons2" type="VBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer"]
+[node name="buttons2" type="VBoxContainer" parent="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer" unique_id=501085235]
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="exit" type="Button" parent="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer/buttons2"]
+[node name="exit" type="Button" parent="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer/buttons2" unique_id=1049793109]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 text = " ВЫХОД "
 
-[node name="reset" type="Button" parent="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer/buttons2"]
+[node name="reset" type="Button" parent="info/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer/buttons2" unique_id=184687241]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 text = " СБРОС"

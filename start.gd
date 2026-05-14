@@ -20,3 +20,7 @@ func _on_fourone_pressed():
 
 func _on_fourtwo_pressed():
 	get_tree().change_scene_to_file("res://four/four-two.tscn")
+
+
+func _on_fiveone_pressed() -> void:
+	get_tree().change_scene_to_file("res://five/five-one.tscn")

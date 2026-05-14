@@ -1,15 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://b43jswfldrn5a"]
+[gd_scene load_steps=6 format=3 uid="uid://b43jswfldrn5a"]
 
 [ext_resource type="Texture2D" uid="uid://ydxlmtylswsb" path="res://img/tile.png" id="1_hbrn4"]
+[ext_resource type="Texture2D" uid="uid://bm4sxh7ibjcs7" path="res://img/bwtiles.png" id="2_x6sja"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pohch"]
 texture = ExtResource("1_hbrn4")
 texture_region_size = Vector2i(100, 100)
 0:0/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m4kg7"]
+texture = ExtResource("2_x6sja")
+texture_region_size = Vector2i(100, 100)
+0:0/0 = 0
+0:1/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_31rdc"]
 tile_size = Vector2i(100, 100)
 sources/0 = SubResource("TileSetAtlasSource_pohch")
+sources/1 = SubResource("TileSetAtlasSource_m4kg7")
 
 [node name="2dTiles" type="TileMap"]
 texture_filter = 1

@@ -104,15 +104,6 @@ func write():
 	xvalue.text = str(write_x)
 	yvalue.text = str(write_y)
 	
-	#nvalue.text = str(snapped(n, 0.01))
-	#avalue.text = str(snapped(write_alpha, 0.01))
-	#svalue.text = str(snapped(s, 0.01))
-	#ovalue.text = str(snapped(omega, 0.01))
-	#vvalue.text = str(snapped(v, 0.01))
-	#tvalue.text = str(snapped(t, 0.1))
-	#xvalue.text = str(snapped(x, 0.01))
-	#yvalue.text = str(snapped(y, 0.01))
-
 func read():
 	r = get_lines(rline)
 	nu = get_lines(nuline)
