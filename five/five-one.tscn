@@ -16,6 +16,7 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("3_gpyuk")
 
 [node name="Camera2D" type="Camera2D" parent="ball" unique_id=1694550915]
+zoom = Vector2(2, 2)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1955005412]
 
@@ -268,6 +269,18 @@ custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 text = " ВЫХОД "
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1105440838]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_top = -5.65
+offset_right = 40.0
+offset_bottom = 34.35
+grow_horizontal = 2
+rotation = 0.7853982
+scale = Vector2(0.2, 0.2)
+color = Color(0.4627451, 1, 0.60784316, 1)
 
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/buttons/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/buttons/stop" to="." method="_on_stop_pressed"]

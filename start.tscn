@@ -89,15 +89,7 @@ text = "5)"
 
 [node name="five-one" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/fifth" unique_id=391496640]
 layout_mode = 2
-text = "Задание 1"
-
-[node name="five-two" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/fifth" unique_id=742009541]
-layout_mode = 2
-text = "Задание 2 "
-
-[node name="five-three" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/fifth" unique_id=1640736325]
-layout_mode = 2
-text = "Задание 3 "
+text = "Задания 1, 2, 3"
 
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/first/task1" to="." method="_on_task_1_pressed"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/first/task2" to="." method="_on_task_2_pressed"]

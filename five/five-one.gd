@@ -20,14 +20,20 @@ extends Node2D
 var h : float
 var v0 : float #начальная горизонтальная скорость
 var alpha : float
+var alpha_deg : float
 var a : float
+var a_full : float #a + g
+
 var t : float
 var x : float
 var y : float
 var s : float
 var l : float
+
 var va : float #средняя
-var v1 : float #конечная
+var v1 : float = 0.0 #конечная
+var v1x : float = 0.0
+var v1y : float = 0.0
 
 const G = 9.8
 
@@ -49,23 +55,56 @@ func _process(_delta):
 	
 	if a != 0:
 		if!toggle_accel.button_pressed: #ускорение один раз
-			x = (v0 + a * sin(alpha)) * t
-			y = h + (a * cos(alpha) * t) - (0.5 * G * (t**2))
+			x = (v0 + a * cos(alpha)) * t
+			y = h + (a * sin(alpha) * t) - (0.5 * G * (t**2))
+			
+			a_full = G
+			v1 = v0 + G * t
 		else: #ускорение постоянно
-			x = v0 * t + 0.5 * (a * sin(alpha) * (t**2))
-			y = h + (0.5 * (- G + a * cos(alpha)) * (t**2))
+			x = v0 * t + 0.5 * (a * cos(alpha) * (t**2))
+			y = h + (0.5 * (- G + a * sin(alpha)) * (t**2))
+			
+			a_full = sqrt( (G - a * sin(alpha))**2 + (a * cos(alpha))**2)
+			v1x = v0 + a * cos(alpha) * t
+			v1y = (- G + a * sin(alpha)) * t
+			v1 = sqrt(v1x**2 + v1y**2)
+		
 	else:
 		x = v0 * t
 		y = h - 0.5*G*(t**2)
+		v1x = v0
+		v1y = - G * t
+		v1 = sqrt(v1x**2 + v1y**2)
 	
 	
 	ball.position = Vector2(x, -y) #у - отрицательный
+	print(ball.position) 
 	write()
 	
 	if ball.position.y >= 0:
 		l = x
+		
+		if a == 0:
+			s = 0.5 * (t * sqrt(v0**2 + (G*t)**2) + ((v0**2) / G) * log((G * t + sqrt(v0**2 + (G*t)**2)) / v0))
+		else:
+			s = integral(get_speed, 0.0, t, 1000)
+		
+		va = s / t
 		write()
 		simulation = false
+
+func get_speed(tau: float):
+	if a == 0:
+		return sqrt(v0**2 + (G*tau)**2)
+	elif !toggle_accel.button_pressed:
+		var vx = v0 + a * sin(alpha)
+		var vy = a * cos(alpha) - G * tau
+		return sqrt(vx**2 + vy**2)
+	else:
+		var vx = v0 + a * sin(alpha) * tau
+		var vy = (-G + a * cos(alpha)) * tau
+		return sqrt(vx**2 + vy**2)
+
 
 func write():
 	tvalue.text = str(snapped(t, 0.1))
@@ -79,7 +118,8 @@ func write():
 func read():
 	h = get_lines(hline) #положительное значение
 	v0 = get_lines(v0line)
-	alpha = get_lines(alphaline)
+	alpha_deg = get_lines(alphaline)
+	alpha = deg_to_rad(alpha_deg)
 	a = get_lines(aline)
 
 func reset():
@@ -104,7 +144,7 @@ func integral (f: Callable, _a: float, _b: float, _n: int) -> float:
 	for i in range(_n):
 		var x_i = a + i*_h
 		sum += f.call(x_i)
-	return  sum * h
+	return  sum * _h
 
 func derivative(f: Callable, _x: float, _h: float = 0.001) -> float:
 	var result: float = (f.call(_x + _h) - f.call(_x - _h))/(2.0 * _h)

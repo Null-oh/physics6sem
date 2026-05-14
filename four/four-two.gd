@@ -92,7 +92,7 @@ func write():
 	tvalue.text = str(snapped(t, 0.1))
 	svalue.text = str(snapped(s, 0.01))
 	accelvalue.text = str(snapped(accel, 0.01))
-	alphavalue.text = str(snapped(rad_to_deg(alpha), 0.01))
+	alphavalue.text = str(snapped(fposmod(rad_to_deg(alpha), 360.0), 0.01))
 
 func read():
 	v = get_lines(vline)

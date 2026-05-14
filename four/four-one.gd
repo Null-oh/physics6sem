@@ -58,7 +58,8 @@ func _process(delta):
 		x = r * cos(alpha)
 		y = r * sin(alpha)
 		write_alpha = rad_to_deg(alpha)
-		s = v * t
+		#s = v * t
+		s += v * delta
 		
 		ball.position = Vector2(x, -y)
 		write()
