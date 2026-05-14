@@ -8,6 +8,7 @@ extends Node3D
 @onready var aline = $info/ColorRect/MarginContainer/HBoxContainer/input2/a/avalue
 @onready var bline = $info/ColorRect/MarginContainer/HBoxContainer/input2/b/bvalue
 @onready var rline = $info/ColorRect/MarginContainer/HBoxContainer/input/r/rvalue
+@onready var philine = $info/ColorRect/MarginContainer/HBoxContainer/input/phi/philine
 
 @onready var xvalue = $info/ColorRect/MarginContainer/HBoxContainer/current/curX/xvalue
 @onready var yvalue = $info/ColorRect/MarginContainer/HBoxContainer/current/curY/yvalue
@@ -17,9 +18,12 @@ extends Node3D
 @onready var accelvalue = $info/ColorRect/MarginContainer/HBoxContainer/input2/accel/accelvalue
 @onready var alphavalue = $info/ColorRect/MarginContainer/HBoxContainer/input2/alpha/alphavalue
 
-var v : float
+var v : float #абс. скорость
+var v_vert : float #вертикальная скорость
+var v_side : float #горизонтальная скорость
 var t1 : float
 var r : float
+
 var a : float
 var b : float
 
@@ -31,6 +35,8 @@ var s : float
 var accel : float
 
 var alpha : float
+var phi : float #угол относительно горизонтали
+var omega : float #угловая скорость
 
 var simulation : bool = false
 
@@ -52,21 +58,25 @@ func _process(delta):
 			v += accel * delta
 			camera.position = cam_position + Vector3(0, y, 0)
 		
-		y = v * t
+		#var phi_rad = deg_to_rad(phi)
+		v_vert = v * sin(deg_to_rad(phi))
+		v_side = v * cos(deg_to_rad(phi))
+		omega = v_side / r
 		
-		#s = vt
-		#v = sqrt(v**2 + vy**2)
-		#s = sqrt( (omega*r)**2 + vy**2) ) * t
-		# = sqrt( r**2 + v**2 ) * t
+		alpha = omega * t
+		
+		#y = v * t
+		y = v_vert * t
 		
 		s = sqrt(r**2 + v**2) * t
 		
-		x = r * cos(t)
-		z = r * sin(t)
+		x = r * cos(alpha)
+		z = r * sin(alpha)
 		
-		alpha = rad_to_deg(atan2(z, x))
+		#alpha = rad_to_deg(atan2(z, x))
 		
 		ball.position = Vector3(x, y, z)
+		print(snapped(ball.position.x, 0.01), "   ", snapped(ball.position.y, 0.01))
 		
 		write()
 
@@ -82,7 +92,7 @@ func write():
 	tvalue.text = str(snapped(t, 0.1))
 	svalue.text = str(snapped(s, 0.01))
 	accelvalue.text = str(snapped(accel, 0.01))
-	alphavalue.text = str(snapped(alpha, 0.01))
+	alphavalue.text = str(snapped(rad_to_deg(alpha), 0.01))
 
 func read():
 	v = get_lines(vline)
@@ -90,6 +100,7 @@ func read():
 	a = get_lines(aline)
 	b = get_lines(bline)
 	r = get_lines(rline)
+	phi = get_lines(philine)
 
 func reset():
 	simulation = false
