@@ -57,7 +57,8 @@ func _process(delta):
 		v = 2 * nu * r * PI
 		x = r * cos(alpha)
 		y = r * sin(alpha)
-		write_alpha = rad_to_deg(alpha)
+		#write_alpha = rad_to_deg(alpha)
+		#write_alpha = alpha
 		#s = v * t
 		s += v * delta
 		
@@ -88,7 +89,8 @@ func _on_go_pressed():
 
 func write(): 
 	write_n = snapped(n, 0.01)
-	write_alpha = snapped(alpha, 0.01)
+#	str(snapped(fposmod(rad_to_deg(alpha), 360.0), 0.01))
+	write_alpha = snapped(fposmod(rad_to_deg(alpha), 360.0), 0.01)
 	write_s = snapped(s, 0.01)
 	write_omega = snapped(omega, 0.01)
 	write_v = snapped(v, 0.01)

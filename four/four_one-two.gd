@@ -57,7 +57,7 @@ func _process(delta):
 		y = r * sin(alpha)
 		
 		ball.position = Vector2(x, -y)
-		write_alpha = rad_to_deg(alpha)
+		write_alpha = rad_to_deg(alpha) + 180
 		write()
 	else:
 		simulation = false
@@ -117,7 +117,7 @@ func reset():
 
 func write():
 	nvalue.text = str(snapped(n, 0.01))
-	avalue.text = str(snapped(write_alpha, 0.01))
+	avalue.text = str(snapped(fposmod(rad_to_deg(write_alpha), 360.0), 0.01))
 	svalue.text = str(snapped(s, 0.01))
 	ovalue.text = str(snapped(omega, 0.01))
 	vvalue.text = str(snapped(v, 0.01))

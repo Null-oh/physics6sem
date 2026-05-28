@@ -23,9 +23,11 @@ var alpha : float
 var alpha_deg : float
 var a : float
 var a_full : float #a + g
+var a_fall : float
 
 var t : float
 var x : float
+var x_fall : float
 var y : float
 var s : float
 var l : float
@@ -78,20 +80,28 @@ func _process(_delta):
 	
 	
 	ball.position = Vector2(x, -y) #у - отрицательный
-	print(ball.position) 
 	write()
 	
+	#if toggle_accel.button_pressed == false:
 	if ball.position.y >= 0:
 		l = x
+		x_fall = l
 		
-		if a == 0:
-			s = 0.5 * (t * sqrt(v0**2 + (G*t)**2) + ((v0**2) / G) * log((G * t + sqrt(v0**2 + (G*t)**2)) / v0))
+		if toggle_accel.button_pressed == false:
+			if a == 0:
+				s = 0.5 * (t * sqrt(v0**2 + (G*t)**2) + ((v0**2) / G) * log((G * t + sqrt(v0**2 + (G*t)**2)) / v0))
+			else:
+				s = integral(get_speed, 0.0, t, 1000)
+			
+			va = s / t
+			simulation = false
 		else:
+			x = v0 * t + 0.5 * (a * cos(alpha) * (t**2))
+			y = 0
+			ball.position = Vector2(x, 0)
 			s = integral(get_speed, 0.0, t, 1000)
-		
-		va = s / t
-		write()
-		simulation = false
+	write()
+	print(ball.position) 
 
 func get_speed(tau: float):
 	if a == 0:
@@ -114,6 +124,7 @@ func write():
 	lvalue.text = str(snapped(l, 0.01))
 	vavalue.text = str(snapped(va, 0.01))
 	v1value.text = str(snapped(v1, 0.01))
+	
 
 func read():
 	h = get_lines(hline) #положительное значение
