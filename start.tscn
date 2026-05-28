@@ -103,6 +103,34 @@ text = "6)"
 layout_mode = 2
 text = "Задания 1, 2, 3"
 
+[node name="eight" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2" unique_id=294224429]
+layout_mode = 2
+
+[node name="8" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/eight" unique_id=112712347]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "8)"
+
+[node name="eight" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/eight" unique_id=2106238681]
+layout_mode = 2
+text = "Задания 1, 2, 3"
+
+[node name="ten" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2" unique_id=1325406829]
+layout_mode = 2
+
+[node name="10" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/ten" unique_id=1135696966]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "10)"
+
+[node name="ten-one" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/ten" unique_id=963752954]
+layout_mode = 2
+text = "Задание 1"
+
+[node name="ten-two" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/ten" unique_id=777167535]
+layout_mode = 2
+text = "Задание 2"
+
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/first/task1" to="." method="_on_task_1_pressed"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/first/task2" to="." method="_on_task_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/third/three" to="." method="_on_three_pressed"]
@@ -110,3 +138,6 @@ text = "Задания 1, 2, 3"
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/fourth/four-two" to="." method="_on_fourtwo_pressed"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/fifth/five-one" to="." method="_on_fiveone_pressed"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/sixth/six" to="." method="_on_six_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/eight/eight" to="." method="_on_eight_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/ten/ten-one" to="." method="_on_ten_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/ten/ten-two" to="." method="_on_tentwo_pressed"]

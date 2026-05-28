@@ -1,0 +1,254 @@
+[gd_scene format=3 uid="uid://dabi8snbcuy1k"]
+
+[ext_resource type="PackedScene" uid="uid://b43jswfldrn5a" path="res://2d_tiles.tscn" id="1_cfwuo"]
+[ext_resource type="Script" uid="uid://bvlr7aykoif86" path="res://eight/eight_one.gd" id="1_pivah"]
+
+[node name="eight_one" type="Node2D" unique_id=2068229597]
+script = ExtResource("1_pivah")
+
+[node name="2dTiles" parent="." unique_id=1294218398 instance=ExtResource("1_cfwuo")]
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 65547, 0, 0, 131083, 0, 0, 196619, 0, 0, 262155, 0, 0, 327691, 0, 0, 393227, 0, 0, 393226, 0, 0, 393225, 0, 0, 393224, 0, 0, 393223, 0, 0, 393222, 0, 0, 393221, 0, 0, 393220, 0, 0, 393219, 0, 0, 393218, 0, 0, 393217, 0, 0, 393216, 0, 0, 327680, 0, 0, 262144, 0, 0, 196608, 0, 0, 131072, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 131082, 0, 0, 196618, 0, 0, 262154, 0, 0, 327690, 0, 0, 327689, 0, 0, 327688, 0, 0, 327687, 0, 0, 327686, 0, 0, 327685, 0, 0, 327684, 0, 0, 327683, 0, 0, 327682, 0, 0, 327681, 0, 0, 262145, 0, 0, 196609, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 196617, 0, 0, 262153, 0, 0, 262152, 0, 0, 262151, 0, 0, 262150, 0, 0, 262149, 0, 0, 262148, 0, 0, 262147, 0, 0, 262146, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=745097353]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=276111703]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.854902, 0.854902, 0.854902, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/ColorRect" unique_id=851432006]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer" unique_id=1846581687]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 50
+
+[node name="input1" type="VBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer" unique_id=956937842]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="alpha" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/input1" unique_id=54257096]
+layout_mode = 2
+
+[node name="alpha" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/input1/alpha" unique_id=1027704039]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = " a = "
+
+[node name="alphaline" type="LineEdit" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/input1/alpha" unique_id=1870552688]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="s" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/input1" unique_id=1030796309]
+layout_mode = 2
+
+[node name="s" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/input1/s" unique_id=1003267885]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = " s = "
+
+[node name="sline" type="LineEdit" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/input1/s" unique_id=1105765227]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="n" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/input1" unique_id=1813597587]
+layout_mode = 2
+
+[node name="n" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/input1/n" unique_id=1197174195]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = " n = "
+
+[node name="nline" type="LineEdit" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/input1/n" unique_id=57585097]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="out1" type="VBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer" unique_id=936365542]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="first" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out1" unique_id=1695806055]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = " Первый: "
+
+[node name="x" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out1" unique_id=1313775522]
+layout_mode = 2
+
+[node name="x" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out1/x" unique_id=2090129223]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = " x(t) = "
+
+[node name="xvalue" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out1/x" unique_id=1081482183]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+
+[node name="y" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out1" unique_id=1064873740]
+layout_mode = 2
+
+[node name="y" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out1/y" unique_id=688661175]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = " y(t) = "
+
+[node name="yvalue" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out1/y" unique_id=873450107]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+
+[node name="v1" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out1" unique_id=703441255]
+layout_mode = 2
+
+[node name="v1" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out1/v1" unique_id=227184461]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = " v1(t) = "
+
+[node name="v1value" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out1/v1" unique_id=2132753790]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+
+[node name="out3" type="VBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer" unique_id=1491659836]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="second" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out3" unique_id=1998897384]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = " Второй: "
+
+[node name="x" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out3" unique_id=1115603994]
+layout_mode = 2
+
+[node name="x" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out3/x" unique_id=1694678946]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = " x(t) = "
+
+[node name="xvalue" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out3/x" unique_id=253031274]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+
+[node name="y" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out3" unique_id=409605749]
+layout_mode = 2
+
+[node name="y" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out3/y" unique_id=105884392]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = " y(t) = "
+
+[node name="yvalue" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out3/y" unique_id=588548294]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+
+[node name="v2" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out3" unique_id=1334846780]
+layout_mode = 2
+
+[node name="v2" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out3/v2" unique_id=10893022]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = " v2(t) = "
+
+[node name="v2value" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out3/v2" unique_id=61140861]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+
+[node name="buttons" type="VBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer" unique_id=919151395]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="start" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/buttons" unique_id=1142486034]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = " СТАРТ"
+
+[node name="stop" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/buttons" unique_id=1531881192]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = " СТОП "
+
+[node name="reset" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/buttons" unique_id=1745585424]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = " СБРОС "
+
+[node name="exit" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/buttons" unique_id=1995340026]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = " ВЫХОД "
+
+[node name="lense1" type="ColorRect" parent="." unique_id=1957856476]
+offset_left = 450.0
+offset_top = 100.0
+offset_right = 490.0
+offset_bottom = 400.0
+color = Color(0.59607846, 0.7019608, 1, 0.49411765)
+
+[node name="light" type="Node" parent="." unique_id=1962779870]
+
+[node name="light_in" type="Line2D" parent="light" unique_id=1336418368]
+default_color = Color(1, 0, 0.016666412, 1)
+
+[node name="light_inside" type="Line2D" parent="light" unique_id=706206167]
+width = 3.0
+default_color = Color(0.6166668, 0, 1, 1)
+
+[node name="light_out" type="Line2D" parent="light" unique_id=1230887366]
+default_color = Color(1, 0, 0.015686275, 1)

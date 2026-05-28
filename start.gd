@@ -28,3 +28,15 @@ func _on_fiveone_pressed() -> void:
 
 func _on_six_pressed() -> void:
 	get_tree().change_scene_to_file("res://six/six_one.tscn")
+
+
+func _on_eight_pressed():
+	get_tree().change_scene_to_file("res://eight/eight_one.tscn")
+
+
+func _on_ten_pressed():
+	get_tree().change_scene_to_file("res://ten/ten-one.tscn")
+
+
+func _on_tentwo_pressed():
+	get_tree().change_scene_to_file("res://ten/ten_two.tscn")

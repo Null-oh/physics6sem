@@ -1,0 +1,237 @@
+[gd_scene format=3 uid="uid://ck4wcs7b8oskl"]
+
+[ext_resource type="Script" uid="uid://dk1mm65ilsxfj" path="res://ten/ten_one.gd" id="1_lp0q6"]
+[ext_resource type="Texture2D" uid="uid://e8dy828aenc7" path="res://img/arrow.png" id="2_s2owr"]
+
+[node name="TenOne" type="Node2D" unique_id=1867247427]
+script = ExtResource("1_lp0q6")
+
+[node name="back" type="ColorRect" parent="." unique_id=1466824566]
+offset_right = 136.49289
+offset_bottom = 83.07692
+scale = Vector2(8.440001, 7.8000007)
+
+[node name="pipe" type="ColorRect" parent="." unique_id=771077943]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 370.0
+offset_top = 439.99997
+offset_right = 780.0
+offset_bottom = 459.99997
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0.4040202, 0.74675053, 1)
+
+[node name="pump1" type="ColorRect" parent="." unique_id=325430339]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 370.0
+offset_top = 160.0
+offset_right = 510.0
+offset_bottom = 460.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.6826358, 0.52438295, 1, 1)
+
+[node name="water" type="ColorRect" parent="pump1" unique_id=828332522]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -70.0
+offset_top = -20.0
+offset_right = -70.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(140, 20)
+color = Color(0, 0.5500002, 1, 1)
+
+[node name="pump2" type="ColorRect" parent="." unique_id=663710642]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 640.0
+offset_top = 160.0
+offset_right = 780.0
+offset_bottom = 460.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.6826358, 0.52438295, 1, 1)
+
+[node name="water" type="ColorRect" parent="pump2" unique_id=532704268]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -20.0
+offset_right = -140.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(140, 20)
+color = Color(0, 0.5500002, 1, 1)
+
+[node name="mass" type="ColorRect" parent="." unique_id=1322788030]
+custom_minimum_size = Vector2(40, 40)
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0.56, 0.20533328, 1)
+
+[node name="force" type="ColorRect" parent="." unique_id=536812534]
+texture_filter = 1
+custom_minimum_size = Vector2(70, 70)
+offset_right = 70.0
+offset_bottom = 70.0
+color = Color(1, 1, 1, 0)
+
+[node name="force" type="TextureRect" parent="force" unique_id=1445206218]
+texture_filter = 1
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 0
+offset_right = 70.0
+offset_bottom = 70.0
+texture = ExtResource("2_s2owr")
+
+[node name="interface" type="CanvasLayer" parent="." unique_id=2014542871]
+
+[node name="ColorRect" type="ColorRect" parent="interface" unique_id=1801313895]
+custom_minimum_size = Vector2(0, 150)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.58, 0.58, 0.58, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="interface/ColorRect" unique_id=1902081354]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="interface/ColorRect/MarginContainer" unique_id=152082139]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 30
+
+[node name="input" type="VBoxContainer" parent="interface/ColorRect/MarginContainer/HBoxContainer" unique_id=2016606894]
+layout_mode = 2
+
+[node name="first" type="HBoxContainer" parent="interface/ColorRect/MarginContainer/HBoxContainer/input" unique_id=1213686422]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="interface/ColorRect/MarginContainer/HBoxContainer/input/first" unique_id=1196885122]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = " S1 = "
+
+[node name="s1line" type="LineEdit" parent="interface/ColorRect/MarginContainer/HBoxContainer/input/first" unique_id=388026422]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+
+[node name="second" type="HBoxContainer" parent="interface/ColorRect/MarginContainer/HBoxContainer/input" unique_id=814028938]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="interface/ColorRect/MarginContainer/HBoxContainer/input/second" unique_id=287124409]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = " S2 = "
+
+[node name="s2line" type="LineEdit" parent="interface/ColorRect/MarginContainer/HBoxContainer/input/second" unique_id=2074556267]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+
+[node name="input2" type="VBoxContainer" parent="interface/ColorRect/MarginContainer/HBoxContainer" unique_id=2124561613]
+layout_mode = 2
+
+[node name="f" type="HBoxContainer" parent="interface/ColorRect/MarginContainer/HBoxContainer/input2" unique_id=882141229]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="interface/ColorRect/MarginContainer/HBoxContainer/input2/f" unique_id=1519564498]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = " F = "
+
+[node name="fline" type="LineEdit" parent="interface/ColorRect/MarginContainer/HBoxContainer/input2/f" unique_id=55950451]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+
+[node name="m" type="HBoxContainer" parent="interface/ColorRect/MarginContainer/HBoxContainer/input2" unique_id=1767764954]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="interface/ColorRect/MarginContainer/HBoxContainer/input2/m" unique_id=1487037989]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = " m = "
+
+[node name="mline" type="LineEdit" parent="interface/ColorRect/MarginContainer/HBoxContainer/input2/m" unique_id=1941246392]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+
+[node name="buttons" type="VBoxContainer" parent="interface/ColorRect/MarginContainer/HBoxContainer" unique_id=1130197199]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="interface/ColorRect/MarginContainer/HBoxContainer/buttons" unique_id=1378502439]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="interface/ColorRect/MarginContainer/HBoxContainer/buttons/HBoxContainer" unique_id=2107072181]
+layout_mode = 2
+
+[node name="set" type="Button" parent="interface/ColorRect/MarginContainer/HBoxContainer/buttons/HBoxContainer/VBoxContainer" unique_id=410486661]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = " настр. "
+
+[node name="start" type="Button" parent="interface/ColorRect/MarginContainer/HBoxContainer/buttons/HBoxContainer/VBoxContainer" unique_id=998298404]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = " старт "
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="interface/ColorRect/MarginContainer/HBoxContainer/buttons/HBoxContainer" unique_id=864350060]
+layout_mode = 2
+
+[node name="reset" type="Button" parent="interface/ColorRect/MarginContainer/HBoxContainer/buttons/HBoxContainer/VBoxContainer2" unique_id=1529690652]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = " сброс "
+
+[node name="exit" type="Button" parent="interface/ColorRect/MarginContainer/HBoxContainer/buttons/HBoxContainer/VBoxContainer2" unique_id=1161861011]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = " выход "
+
+[connection signal="pressed" from="interface/ColorRect/MarginContainer/HBoxContainer/buttons/HBoxContainer/VBoxContainer/set" to="." method="_on_set_pressed"]
+[connection signal="pressed" from="interface/ColorRect/MarginContainer/HBoxContainer/buttons/HBoxContainer/VBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="interface/ColorRect/MarginContainer/HBoxContainer/buttons/HBoxContainer/VBoxContainer2/reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="interface/ColorRect/MarginContainer/HBoxContainer/buttons/HBoxContainer/VBoxContainer2/exit" to="." method="_on_exit_pressed"]
