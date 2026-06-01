@@ -40,3 +40,7 @@ func _on_ten_pressed():
 
 func _on_tentwo_pressed():
 	get_tree().change_scene_to_file("res://ten/ten_two.tscn")
+
+
+func _on_tenthree_pressed():
+	get_tree().change_scene_to_file("res://ten/ten_three.tscn")

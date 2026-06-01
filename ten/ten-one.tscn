@@ -52,7 +52,7 @@ offset_bottom = -20.0
 grow_horizontal = 2
 grow_vertical = 0
 pivot_offset = Vector2(140, 20)
-color = Color(0, 0.5500002, 1, 1)
+color = Color(0, 0.54901963, 1, 1)
 
 [node name="pump2" type="ColorRect" parent="." unique_id=663710642]
 anchors_preset = 8

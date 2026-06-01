@@ -131,6 +131,10 @@ text = "Задание 1"
 layout_mode = 2
 text = "Задание 2"
 
+[node name="ten-three" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/ten" unique_id=1836388673]
+layout_mode = 2
+text = "Задание 2"
+
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/first/task1" to="." method="_on_task_1_pressed"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/first/task2" to="." method="_on_task_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/third/three" to="." method="_on_three_pressed"]
@@ -141,3 +145,4 @@ text = "Задание 2"
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/eight/eight" to="." method="_on_eight_pressed"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/ten/ten-one" to="." method="_on_ten_pressed"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/ten/ten-two" to="." method="_on_tentwo_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/ten/ten-three" to="." method="_on_tenthree_pressed"]

@@ -83,12 +83,10 @@ func _on_set_pressed():
 	pipe.size.x = right_bottom.x - left_bottom.x
 	pipe.position = Vector2(left_bottom.x, left_bottom.y - pipe.size.y)
 
-
 func _on_reset_pressed():
-	s1line.text = str(10)
-	s2line.text = str(10)
+	s1line.text = str(80)
+	s2line.text = str(80)
 	_on_set_pressed()
-
 
 func _on_start_pressed():
 	read()

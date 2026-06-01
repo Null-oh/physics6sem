@@ -1,3 +1,158 @@
 [gd_scene format=3 uid="uid://cj80k2lwq7how"]
 
+[ext_resource type="Script" uid="uid://bekjev03spkmo" path="res://ten/ten_two.gd" id="1_oln8l"]
+
 [node name="TenTwo" type="Node2D" unique_id=1112323022]
+script = ExtResource("1_oln8l")
+
+[node name="back" type="ColorRect" parent="." unique_id=24573557]
+offset_right = 136.49289
+offset_bottom = 83.07692
+scale = Vector2(8.440001, 7.8000007)
+
+[node name="bucket" type="ColorRect" parent="." unique_id=799242137]
+offset_left = 346.0
+offset_top = 56.0
+offset_right = 746.0
+offset_bottom = 456.0
+color = Color(0.68235296, 0.5254902, 1, 1)
+
+[node name="water" type="ColorRect" parent="bucket" unique_id=87714168]
+layout_mode = 0
+offset_top = 100.0
+offset_right = 400.0
+offset_bottom = 400.0
+color = Color(0.31, 0.6895001, 1, 1)
+
+[node name="mass" type="ColorRect" parent="." unique_id=2060854077]
+custom_minimum_size = Vector2(70, 50)
+offset_left = 510.0
+offset_top = 130.0
+offset_right = 580.0001
+offset_bottom = 180.0
+pivot_offset = Vector2(36, 25)
+color = Color(0, 0.56, 0.20533328, 1)
+
+[node name="interface" type="CanvasLayer" parent="." unique_id=1241718773]
+
+[node name="ColorRect" type="ColorRect" parent="interface" unique_id=144706246]
+custom_minimum_size = Vector2(0, 150)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.58, 0.58, 0.58, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="interface/ColorRect" unique_id=258374666]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="interface/ColorRect/MarginContainer" unique_id=2063806439]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 30
+
+[node name="input" type="VBoxContainer" parent="interface/ColorRect/MarginContainer/HBoxContainer" unique_id=1558100773]
+layout_mode = 2
+
+[node name="first" type="HBoxContainer" parent="interface/ColorRect/MarginContainer/HBoxContainer/input" unique_id=1967746694]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="interface/ColorRect/MarginContainer/HBoxContainer/input/first" unique_id=743490312]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = " ρ1 = "
+
+[node name="ro1line" type="LineEdit" parent="interface/ColorRect/MarginContainer/HBoxContainer/input/first" unique_id=258157295]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+
+[node name="second" type="HBoxContainer" parent="interface/ColorRect/MarginContainer/HBoxContainer/input" unique_id=1658400119]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="interface/ColorRect/MarginContainer/HBoxContainer/input/second" unique_id=1350385222]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = " ρ2 = "
+
+[node name="ro2line" type="LineEdit" parent="interface/ColorRect/MarginContainer/HBoxContainer/input/second" unique_id=1595294293]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+
+[node name="input2" type="VBoxContainer" parent="interface/ColorRect/MarginContainer/HBoxContainer" unique_id=1518960853]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="f" type="HBoxContainer" parent="interface/ColorRect/MarginContainer/HBoxContainer/input2" unique_id=287683003]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="interface/ColorRect/MarginContainer/HBoxContainer/input2/f" unique_id=1979663224]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = " V = "
+
+[node name="vline" type="LineEdit" parent="interface/ColorRect/MarginContainer/HBoxContainer/input2/f" unique_id=704308923]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+
+[node name="f2" type="HBoxContainer" parent="interface/ColorRect/MarginContainer/HBoxContainer/input2" unique_id=1805860568]
+layout_mode = 2
+
+[node name="result" type="Label" parent="interface/ColorRect/MarginContainer/HBoxContainer/input2/f2" unique_id=747952103]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = " (...)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="buttons" type="VBoxContainer" parent="interface/ColorRect/MarginContainer/HBoxContainer" unique_id=1122644197]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="interface/ColorRect/MarginContainer/HBoxContainer/buttons" unique_id=212516287]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="interface/ColorRect/MarginContainer/HBoxContainer/buttons/HBoxContainer" unique_id=1327269461]
+layout_mode = 2
+
+[node name="start" type="Button" parent="interface/ColorRect/MarginContainer/HBoxContainer/buttons/HBoxContainer/VBoxContainer" unique_id=1653320238]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = " старт "
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="interface/ColorRect/MarginContainer/HBoxContainer/buttons/HBoxContainer" unique_id=1738335710]
+layout_mode = 2
+
+[node name="reset" type="Button" parent="interface/ColorRect/MarginContainer/HBoxContainer/buttons/HBoxContainer/VBoxContainer2" unique_id=1064101139]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = " сброс "
+
+[node name="exit" type="Button" parent="interface/ColorRect/MarginContainer/HBoxContainer/buttons/HBoxContainer/VBoxContainer2" unique_id=117252533]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = " выход "
+
+[connection signal="pressed" from="interface/ColorRect/MarginContainer/HBoxContainer/buttons/HBoxContainer/VBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="interface/ColorRect/MarginContainer/HBoxContainer/buttons/HBoxContainer/VBoxContainer2/reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="interface/ColorRect/MarginContainer/HBoxContainer/buttons/HBoxContainer/VBoxContainer2/exit" to="." method="_on_exit_pressed"]
