@@ -3,25 +3,26 @@
 [ext_resource type="PackedScene" uid="uid://b43jswfldrn5a" path="res://2d_tiles.tscn" id="1_cfwuo"]
 [ext_resource type="Script" uid="uid://bvlr7aykoif86" path="res://eight/eight_one.gd" id="1_pivah"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_pivah"]
+radius = 0.0
+
 [node name="eight_one" type="Node2D" unique_id=2068229597]
 script = ExtResource("1_pivah")
+C = 500.0
 
 [node name="2dTiles" parent="." unique_id=1294218398 instance=ExtResource("1_cfwuo")]
-layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 65547, 0, 0, 131083, 0, 0, 196619, 0, 0, 262155, 0, 0, 327691, 0, 0, 393227, 0, 0, 393226, 0, 0, 393225, 0, 0, 393224, 0, 0, 393223, 0, 0, 393222, 0, 0, 393221, 0, 0, 393220, 0, 0, 393219, 0, 0, 393218, 0, 0, 393217, 0, 0, 393216, 0, 0, 327680, 0, 0, 262144, 0, 0, 196608, 0, 0, 131072, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 131082, 0, 0, 196618, 0, 0, 262154, 0, 0, 327690, 0, 0, 327689, 0, 0, 327688, 0, 0, 327687, 0, 0, 327686, 0, 0, 327685, 0, 0, 327684, 0, 0, 327683, 0, 0, 327682, 0, 0, 327681, 0, 0, 262145, 0, 0, 196609, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 196617, 0, 0, 262153, 0, 0, 262152, 0, 0, 262151, 0, 0, 262150, 0, 0, 262149, 0, 0, 262148, 0, 0, 262147, 0, 0, 262146, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0)
+layer_0/tile_data = PackedInt32Array(14, 0, 0, 13, 0, 0, 12, 0, 0, 11, 0, 0, 10, 0, 0, 9, 0, 0, 8, 0, 0, 7, 0, 0, 6, 0, 0, 5, 0, 0, 4, 0, 0, 3, 0, 0, 2, 0, 0, 1, 0, 0, 0, 0, 0, 65535, 0, 0, 65534, 0, 0, 65533, 0, 0, 65532, 0, 0, 65531, 0, 0, 65530, 0, 0, 65529, 0, 0, 65528, 0, 0, 65527, 0, 0, 65526, 0, 0, 65525, 0, 0, 65524, 0, 0, 65523, 0, 0, 65522, 0, 0, 65521, 0, 0, 131057, 0, 0, 196593, 0, 0, 262129, 0, 0, 327665, 0, 0, 393201, 0, 0, 458737, 0, 0, 524273, 0, 0, 589809, 0, 0, 589810, 0, 0, 524274, 0, 0, 458738, 0, 0, 393202, 0, 0, 327666, 0, 0, 262130, 0, 0, 196594, 0, 0, 131058, 0, 0, 131059, 0, 0, 196595, 0, 0, 262131, 0, 0, 327667, 0, 0, 393203, 0, 0, 458739, 0, 0, 524275, 0, 0, 589811, 0, 0, 589812, 0, 0, 524276, 0, 0, 458740, 0, 0, 393204, 0, 0, 327668, 0, 0, 262132, 0, 0, 196596, 0, 0, 131060, 0, 0, 131061, 0, 0, 196597, 0, 0, 262133, 0, 0, 327669, 0, 0, 393205, 0, 0, 458741, 0, 0, 524277, 0, 0, 589813, 0, 0, 589814, 0, 0, 524278, 0, 0, 458742, 0, 0, 393206, 0, 0, 327670, 0, 0, 262134, 0, 0, 196598, 0, 0, 131062, 0, 0, 131063, 0, 0, 196599, 0, 0, 262135, 0, 0, 327671, 0, 0, 393207, 0, 0, 458743, 0, 0, 524279, 0, 0, 589815, 0, 0, 589816, 0, 0, 524280, 0, 0, 458744, 0, 0, 393208, 0, 0, 327672, 0, 0, 262136, 0, 0, 196600, 0, 0, 131064, 0, 0, 131065, 0, 0, 196601, 0, 0, 262137, 0, 0, 327673, 0, 0, 393209, 0, 0, 458745, 0, 0, 524281, 0, 0, 589817, 0, 0, 589818, 0, 0, 524282, 0, 0, 458746, 0, 0, 393210, 0, 0, 327674, 0, 0, 262138, 0, 0, 196602, 0, 0, 131066, 0, 0, 131067, 0, 0, 196603, 0, 0, 262139, 0, 0, 327675, 0, 0, 393211, 0, 0, 458747, 0, 0, 524283, 0, 0, 589819, 0, 0, 589820, 0, 0, 524284, 0, 0, 458748, 0, 0, 393212, 0, 0, 327676, 0, 0, 262140, 0, 0, 196604, 0, 0, 131068, 0, 0, 131069, 0, 0, 196605, 0, 0, 262141, 0, 0, 327677, 0, 0, 393213, 0, 0, 458749, 0, 0, 524285, 0, 0, 589821, 0, 0, 589822, 0, 0, 524286, 0, 0, 458750, 0, 0, 393214, 0, 0, 327678, 0, 0, 262142, 0, 0, 196606, 0, 0, 131070, 0, 0, 131071, 0, 0, 196607, 0, 0, 262143, 0, 0, 327679, 0, 0, 393215, 0, 0, 458751, 0, 0, 524287, 0, 0, 589823, 0, 0, 524288, 0, 0, 458752, 0, 0, 393216, 0, 0, 327680, 0, 0, 262144, 0, 0, 196608, 0, 0, 131072, 0, 0, 65536, 0, 0, 65537, 0, 0, 131073, 0, 0, 196609, 0, 0, 262145, 0, 0, 327681, 0, 0, 393217, 0, 0, 458753, 0, 0, 524289, 0, 0, 524290, 0, 0, 458754, 0, 0, 393218, 0, 0, 327682, 0, 0, 262146, 0, 0, 196610, 0, 0, 131074, 0, 0, 65538, 0, 0, 65539, 0, 0, 131075, 0, 0, 196611, 0, 0, 262147, 0, 0, 327683, 0, 0, 393219, 0, 0, 458755, 0, 0, 524291, 0, 0, 524292, 0, 0, 458756, 0, 0, 393220, 0, 0, 327684, 0, 0, 262148, 0, 0, 196612, 0, 0, 131076, 0, 0, 65540, 0, 0, 65541, 0, 0, 131077, 0, 0, 196613, 0, 0, 262149, 0, 0, 327685, 0, 0, 393221, 0, 0, 458757, 0, 0, 524293, 0, 0, 524294, 0, 0, 458758, 0, 0, 393222, 0, 0, 327686, 0, 0, 262150, 0, 0, 196614, 0, 0, 131078, 0, 0, 65542, 0, 0, 65543, 0, 0, 131079, 0, 0, 196615, 0, 0, 262151, 0, 0, 327687, 0, 0, 393223, 0, 0, 458759, 0, 0, 524295, 0, 0, 524296, 0, 0, 458760, 0, 0, 393224, 0, 0, 327688, 0, 0, 262152, 0, 0, 196616, 0, 0, 131080, 0, 0, 65544, 0, 0, 65545, 0, 0, 131081, 0, 0, 196617, 0, 0, 262153, 0, 0, 327689, 0, 0, 393225, 0, 0, 458761, 0, 0, 524297, 0, 0, 524298, 0, 0, 458762, 0, 0, 393226, 0, 0, 327690, 0, 0, 262154, 0, 0, 196618, 0, 0, 131082, 0, 0, 65546, 0, 0, 65547, 0, 0, 131083, 0, 0, 196619, 0, 0, 262155, 0, 0, 327691, 0, 0, 393227, 0, 0, 458763, 0, 0, 524299, 0, 0, 524300, 0, 0, 458764, 0, 0, 393228, 0, 0, 327692, 0, 0, 262156, 0, 0, 196620, 0, 0, 131084, 0, 0, 65548, 0, 0, 65549, 0, 0, 131085, 0, 0, 196621, 0, 0, 262157, 0, 0, 327693, 0, 0, 393229, 0, 0, 458765, 0, 0, 524301, 0, 0, 524302, 0, 0, 458766, 0, 0, 393230, 0, 0, 327694, 0, 0, 262158, 0, 0, 196622, 0, 0, 131086, 0, 0, 65550, 0, 0)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=745097353]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1258899892]
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=276111703]
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1924260876]
+anchors_preset = 9
 anchor_bottom = 1.0
-offset_top = -200.0
-grow_horizontal = 2
-grow_vertical = 0
-color = Color(0.854902, 0.854902, 0.854902, 1)
+offset_right = 200.0
+grow_vertical = 2
+color = Color(0.58, 0.58, 0.58, 1)
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/ColorRect" unique_id=851432006]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/ColorRect" unique_id=1942611897]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -33,222 +34,105 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer" unique_id=1846581687]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_constants/separation = 50
-
-[node name="input1" type="VBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer" unique_id=956937842]
-layout_mode = 2
-size_flags_vertical = 4
-
-[node name="alpha" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/input1" unique_id=54257096]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer" unique_id=1538917234]
 layout_mode = 2
 
-[node name="alpha" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/input1/alpha" unique_id=1027704039]
-custom_minimum_size = Vector2(80, 0)
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer" unique_id=663446284]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
-text = " a = "
+theme_override_constants/separation = 15
 
-[node name="alphaline" type="LineEdit" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/input1/alpha" unique_id=1870552688]
-custom_minimum_size = Vector2(130, 0)
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1159583364]
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 20
+text = "кол-во:"
 
-[node name="s" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/input1" unique_id=1030796309]
+[node name="number" type="LineEdit" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1046904787]
 layout_mode = 2
+theme_override_font_sizes/font_size = 20
 
-[node name="s" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/input1/s" unique_id=1003267885]
-custom_minimum_size = Vector2(80, 0)
+[node name="make" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer" unique_id=1941189485]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
-text = " s = "
+theme_override_font_sizes/font_size = 20
+text = "СОЗДАТЬ"
 
-[node name="sline" type="LineEdit" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/input1/s" unique_id=1105765227]
-custom_minimum_size = Vector2(130, 0)
+[node name="set" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer" unique_id=1619464883]
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 20
+text = "НАРИСОВАТЬ"
 
-[node name="n" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/input1" unique_id=1813597587]
+[node name="clear" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer" unique_id=845917458]
 layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "СТЕРЕТЬ"
 
-[node name="n" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/input1/n" unique_id=1197174195]
-custom_minimum_size = Vector2(80, 0)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
-text = " n = "
-
-[node name="nline" type="LineEdit" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/input1/n" unique_id=57585097]
-custom_minimum_size = Vector2(130, 0)
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-
-[node name="out1" type="VBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer" unique_id=936365542]
-layout_mode = 2
-size_flags_vertical = 4
-
-[node name="first" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out1" unique_id=1695806055]
-custom_minimum_size = Vector2(70, 0)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
-text = " Первый: "
-
-[node name="x" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out1" unique_id=1313775522]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer" unique_id=928910260]
 layout_mode = 2
 
-[node name="x" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out1/x" unique_id=2090129223]
-custom_minimum_size = Vector2(70, 0)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
-text = " x(t) = "
-
-[node name="xvalue" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out1/x" unique_id=1081482183]
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
-
-[node name="y" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out1" unique_id=1064873740]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer" unique_id=468374871]
 layout_mode = 2
 
-[node name="y" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out1/y" unique_id=688661175]
-custom_minimum_size = Vector2(70, 0)
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=1498503553]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
-text = " y(t) = "
+theme_override_font_sizes/font_size = 20
+text = "α ="
 
-[node name="yvalue" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out1/y" unique_id=873450107]
-custom_minimum_size = Vector2(100, 0)
+[node name="alphaline" type="LineEdit" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=313529988]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 20
 
-[node name="v1" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out1" unique_id=703441255]
+[node name="start" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer" unique_id=743176589]
 layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "СТАРТ"
 
-[node name="v1" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out1/v1" unique_id=227184461]
-custom_minimum_size = Vector2(70, 0)
+[node name="reset" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer" unique_id=974965388]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
-text = " v1(t) = "
+theme_override_font_sizes/font_size = 20
+text = "СБРОС"
 
-[node name="v1value" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out1/v1" unique_id=2132753790]
-custom_minimum_size = Vector2(100, 0)
+[node name="exit" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer" unique_id=635853958]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 20
+text = "ВЫХОД"
 
-[node name="out3" type="VBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer" unique_id=1491659836]
-layout_mode = 2
-size_flags_vertical = 4
+[node name="areas" type="Control" parent="." unique_id=551638723]
+layout_mode = 3
+anchors_preset = 0
 
-[node name="second" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out3" unique_id=1998897384]
-custom_minimum_size = Vector2(70, 0)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
-text = " Второй: "
+[node name="light" type="RigidBody2D" parent="." unique_id=1914958230]
+position = Vector2(650, 20)
+gravity_scale = 0.0
+linear_damp_mode = 1
 
-[node name="x" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out3" unique_id=1115603994]
-layout_mode = 2
+[node name="ColorRect" type="ColorRect" parent="light" unique_id=1461701890]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0, 0, 1)
 
-[node name="x" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out3/x" unique_id=1694678946]
-custom_minimum_size = Vector2(70, 0)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
-text = " x(t) = "
+[node name="CollisionShape2D" type="CollisionShape2D" parent="light" unique_id=1078852832]
+shape = SubResource("CircleShape2D_pivah")
 
-[node name="xvalue" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out3/x" unique_id=253031274]
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
+[node name="Camera2D" type="Camera2D" parent="light" unique_id=369099714]
+zoom = Vector2(0.715, 0.715)
+limit_left = -1500
+limit_top = 0
+limit_right = 1500
+limit_bottom = 900
 
-[node name="y" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out3" unique_id=409605749]
-layout_mode = 2
+[node name="lines" type="Node2D" parent="." unique_id=748969470]
 
-[node name="y" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out3/y" unique_id=105884392]
-custom_minimum_size = Vector2(70, 0)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
-text = " y(t) = "
-
-[node name="yvalue" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out3/y" unique_id=588548294]
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
-
-[node name="v2" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out3" unique_id=1334846780]
-layout_mode = 2
-
-[node name="v2" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out3/v2" unique_id=10893022]
-custom_minimum_size = Vector2(70, 0)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
-text = " v2(t) = "
-
-[node name="v2value" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/out3/v2" unique_id=61140861]
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
-
-[node name="buttons" type="VBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer" unique_id=919151395]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="start" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/buttons" unique_id=1142486034]
-custom_minimum_size = Vector2(120, 0)
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = " СТАРТ"
-
-[node name="stop" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/buttons" unique_id=1531881192]
-custom_minimum_size = Vector2(120, 0)
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = " СТОП "
-
-[node name="reset" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/buttons" unique_id=1745585424]
-custom_minimum_size = Vector2(120, 0)
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = " СБРОС "
-
-[node name="exit" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/buttons" unique_id=1995340026]
-custom_minimum_size = Vector2(120, 0)
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = " ВЫХОД "
-
-[node name="lense1" type="ColorRect" parent="." unique_id=1957856476]
-offset_left = 450.0
-offset_top = 100.0
-offset_right = 490.0
-offset_bottom = 400.0
-color = Color(0.59607846, 0.7019608, 1, 0.49411765)
-
-[node name="light" type="Node" parent="." unique_id=1962779870]
-
-[node name="light_in" type="Line2D" parent="light" unique_id=1336418368]
-default_color = Color(1, 0, 0.016666412, 1)
-
-[node name="light_inside" type="Line2D" parent="light" unique_id=706206167]
-width = 3.0
-default_color = Color(0.6166668, 0, 1, 1)
-
-[node name="light_out" type="Line2D" parent="light" unique_id=1230887366]
-default_color = Color(1, 0, 0.015686275, 1)
+[connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/make" to="." method="_on_make_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/set" to="." method="_on_set_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/clear" to="." method="_on_clear_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer/reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer/exit" to="." method="_on_exit_pressed"]
