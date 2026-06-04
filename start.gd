@@ -44,3 +44,7 @@ func _on_tentwo_pressed():
 
 func _on_tenthree_pressed():
 	get_tree().change_scene_to_file("res://ten/ten_three.tscn")
+
+
+func _on_eightthree_pressed():
+	get_tree().change_scene_to_file("res://eight/eight-three.tscn")

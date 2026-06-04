@@ -147,6 +147,7 @@ text = "Задание 3"
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/fifth/five-one" to="." method="_on_fiveone_pressed"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/sixth/six" to="." method="_on_six_pressed"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/eight/eight-one" to="." method="_on_eight_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/eight/eight-three" to="." method="_on_eightthree_pressed"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/ten/ten-one" to="." method="_on_ten_pressed"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/ten/ten-two" to="." method="_on_tentwo_pressed"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer2/ten/ten-three" to="." method="_on_tenthree_pressed"]

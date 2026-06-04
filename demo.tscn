@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cltjos5jjc2xt"]
 
 [ext_resource type="Script" uid="uid://bpb7fo3o6wg6f" path="res://demo.gd" id="1_5hfv0"]
+[ext_resource type="Script" uid="uid://cam2ns6xs7uhg" path="res://static_body_2d.gd" id="2_0bhed"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fr1sm"]
 
@@ -78,6 +79,12 @@ text = "set"
 [node name="clear" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer" unique_id=761349669]
 layout_mode = 2
 text = "set"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1674910146]
+script = ExtResource("2_0bhed")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=920768114]
+position = Vector2(556, 101)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/make" to="." method="_on_make_pressed"]

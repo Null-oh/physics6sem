@@ -1,0 +1,185 @@
+[gd_scene format=3 uid="uid://b14day8w3r7xv"]
+
+[ext_resource type="Script" uid="uid://dn5t7potwt8cw" path="res://eight/eight_three.gd" id="1_qg0a8"]
+[ext_resource type="Texture2D" uid="uid://cq2ff4w43c7g3" path="res://img/lense1.png" id="2_xq0m8"]
+[ext_resource type="Texture2D" uid="uid://cpu4uasv6xmow" path="res://img/lense2.png" id="3_hipea"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kxq74"]
+radius = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_svp2s"]
+size = Vector2(2, 256)
+
+[node name="EightThree" type="Node2D" unique_id=116655225]
+script = ExtResource("1_qg0a8")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2057682653]
+offset_right = 1201.0
+offset_bottom = 700.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1191426862]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1236280591]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 200.0
+grow_vertical = 2
+color = Color(0.58, 0.58, 0.58, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/ColorRect" unique_id=1738029598]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer" unique_id=1396784501]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer" unique_id=1436717206]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Линза:"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer" unique_id=1972541853]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer" unique_id=248678099]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "F = "
+
+[node name="F1line" type="LineEdit" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1708465971]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="type" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer" unique_id=1309308699]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "(...)"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer" unique_id=99588629]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer" unique_id=258577405]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Свет:"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer" unique_id=409376029]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=362611668]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "α ="
+
+[node name="alphaline" type="LineEdit" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=137846247]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer" unique_id=2138101304]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2" unique_id=1637930600]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "x ="
+
+[node name="xline" type="LineEdit" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2" unique_id=533375687]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer" unique_id=1231268104]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer3" unique_id=602883682]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "y ="
+
+[node name="yline" type="LineEdit" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer3" unique_id=230820878]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="set" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer" unique_id=961985669]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "ПРИМЕНИТЬ"
+
+[node name="reset" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer" unique_id=1894210294]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "СБРОС"
+
+[node name="start" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer" unique_id=2123845137]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "СТАРТ"
+
+[node name="exit" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer" unique_id=999994176]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "ВЫХОД"
+
+[node name="light1" type="RigidBody2D" parent="." unique_id=1768591391]
+position = Vector2(650, 100)
+gravity_scale = 0.0
+linear_damp_mode = 1
+angular_damp_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="light1" unique_id=835609495]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="light1" unique_id=1906895105]
+shape = SubResource("CircleShape2D_kxq74")
+
+[node name="Camera2D" type="Camera2D" parent="light1" unique_id=67934208]
+position = Vector2(174, 273)
+limit_left = 0
+limit_top = 0
+limit_right = 1150
+limit_bottom = 648
+
+[node name="lense" type="Area2D" parent="." unique_id=1368895133]
+position = Vector2(650, 300)
+rotation = 1.5707964
+
+[node name="sprite1" type="Sprite2D" parent="lense" unique_id=473428350]
+visible = false
+texture_filter = 1
+texture = ExtResource("2_xq0m8")
+
+[node name="sprite2" type="Sprite2D" parent="lense" unique_id=1177276312]
+visible = false
+texture_filter = 1
+texture = ExtResource("3_hipea")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lense" unique_id=1734621634]
+shape = SubResource("RectangleShape2D_svp2s")
+
+[connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer/set" to="." method="_on_set_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer/reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer/exit" to="." method="_on_exit_pressed"]
+[connection signal="body_entered" from="lense" to="." method="_on_lense_body_entered"]
