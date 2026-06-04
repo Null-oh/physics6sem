@@ -41,21 +41,48 @@ theme_override_constants/margin_bottom = 10
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer" unique_id=1396784501]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer" unique_id=1436717206]
+[node name="LENSE" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer" unique_id=1436717206]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Линза:"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer" unique_id=1972541853]
+[node name="HBoxContainer5" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer" unique_id=755778318]
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="Label" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer" unique_id=248678099]
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1067082045]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "s = "
+
+[node name="sline" type="LineEdit" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=258208775]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer" unique_id=2144973630]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer6" unique_id=340650550]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "n = "
+
+[node name="nline" type="LineEdit" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer6" unique_id=1309507928]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer" unique_id=908689207]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1241269393]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "F = "
 
-[node name="F1line" type="LineEdit" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1708465971]
+[node name="fline" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=891035700]
+custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 
@@ -177,6 +204,20 @@ texture = ExtResource("3_hipea")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="lense" unique_id=1734621634]
 shape = SubResource("RectangleShape2D_svp2s")
+
+[node name="focus" type="ColorRect" parent="." unique_id=1090422414]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.5
+offset_top = -2.5
+offset_right = 2.5
+offset_bottom = 2.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.75, 0, 1, 1)
 
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer/set" to="." method="_on_set_pressed"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer/reset" to="." method="_on_reset_pressed"]

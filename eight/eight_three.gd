@@ -5,7 +5,9 @@ extends Node2D
 
 @export var C : float = 100.0
 
-@onready var f1line = $CanvasLayer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/F1line
+@onready var f1label = $CanvasLayer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer2/fline
+@onready var sline = $CanvasLayer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer5/sline
+@onready var nline = $CanvasLayer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer6/nline
 
 @onready var alphaline = $CanvasLayer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/alphaline
 @onready var xline = $CanvasLayer/ColorRect/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2/xline
@@ -16,13 +18,16 @@ extends Node2D
 @onready var type = $CanvasLayer/ColorRect/MarginContainer/VBoxContainer/type
 
 @onready var lense = $lense
+@onready var focus = $focus
 
 var x
 var y
 var alpha
 var start_position : Vector2
 
-var f1
+var f
+var s
+var n
 
 var is_moving : bool = false
 var vx
@@ -35,12 +40,11 @@ func _ready():
 	
 	start_position = Vector2.ZERO
 
-func _process(delta):
-	pass
-
 func refract(lens: Area2D, light: RigidBody2D):
 	var offset = light.position.x - lens.position.x
-	var f = abs(f1)
+	print("Offset: ", offset)
+	print("Start Y: ", start_position.y)
+	print("Lens Y ± f: ", lens.position.y + f, " or ", lens.position.y - f)
 	var v = light.linear_velocity
 	var speed = v.length()
 	
@@ -48,25 +52,27 @@ func refract(lens: Area2D, light: RigidBody2D):
 	var alpha_out
 	
 	if is_equal_approx(start_position.y, lens.position.y + f) or is_equal_approx(start_position.y, lens.position.y - f):
-		if is_equal_approx(x, lens.position.x):
+		if is_equal_approx(start_position.x, lens.position.x):
 			alpha_out = 0
 		else:
-			alpha_out = - offset / f1
+			alpha_out = alpha_in - offset / f
 	elif alpha_in == 0:
-		alpha_out = - offset / f1
+		alpha_out = - offset / f
 	else:
-		alpha_out = alpha_in - offset / f1
+		alpha_out = alpha_in - offset / f
 	
 	var new_vx = speed * sin(alpha_out)
 	var new_vy = speed * cos(alpha_out)
 	
 	light.linear_velocity = Vector2(new_vx, new_vy)
+	print("alpha_out = ", alpha_out)
 
 func read():
 	x = get_lines(xline)
 	y = get_lines(yline)
 	alpha = get_lines(alphaline)
-	f1 = get_lines(f1line)
+	s = get_lines(sline)
+	n = get_lines(nline)
 
 func get_lines(line_edit: LineEdit, default: float = 0.0) -> float:
 	if line_edit.text.is_valid_float():
@@ -76,7 +82,8 @@ func get_lines(line_edit: LineEdit, default: float = 0.0) -> float:
 func _on_set_pressed():
 	read()
 	
-	if f1 < 0: #вогнутая
+	f = s / (n - 1)
+	if f < 0: #вогнутая
 		sprite1.visible = false
 		sprite2.visible = true
 		type.text = "Вогнутая"
@@ -84,10 +91,14 @@ func _on_set_pressed():
 		sprite1.visible = true
 		sprite2.visible = false
 		type.text = "Выпуклая"
+	f1label.text = str(snapped(f, 0.01))
 	
 	light1.position.x += x
 	light1.position.y = lense.position.y - y
 	start_position = light1.position
+	
+	focus.position.x = 650
+	focus.position.y = lense.position.y - f
 
 
 func _on_reset_pressed():
@@ -98,6 +109,8 @@ func _on_reset_pressed():
 	light1.linear_velocity = Vector2.ZERO
 	
 	start_position = Vector2.ZERO
+	
+	f1label.text = "..."
 
 
 func _on_start_pressed():
