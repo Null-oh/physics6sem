@@ -96,7 +96,7 @@ func _on_start_pressed():
 	# f1 = f
 	# f2 - выталкивает
 	# if f2 > mg - mass goes up
-	#elif f2 < mg - mass goes down
+	#elif f2 < mg - NOTHING
 	#else nothing
 	# f2 = s2/s1 * f1
 	
@@ -110,7 +110,8 @@ func _on_start_pressed():
 	if f2 > m * G:
 		go_up()
 	elif f2 < m * G:
-		go_down()
+		#go_down()
+		pass
 	else:
 		pass
 	

@@ -40,7 +40,7 @@ func _on_start_pressed():
 	print("ro2 = ", ro2)
 	if ro2 == ro1:
 		_float(mass)
-		result.text = "Не двигается"
+		result.text = "Дрейфует"
 	elif ro2 > ro1:
 		sink(mass)
 		result.text = "Тонет"
@@ -52,20 +52,22 @@ func oscillate(body):
 	var start_y = body.position.y
 	var tween = create_tween()
 	
-	tween.tween_property(body, "position:y", start_y - 20, 0.2)
-	tween.tween_property(body, "position:y", start_y, 0.2)
+	tween.tween_property(body, "position:y", 130, 0.3)
 	
-	tween.tween_property(body, "position:y", start_y - 15, 0.15)
-	tween.tween_property(body, "position:y", start_y, 0.15)
+	tween.tween_property(body, "position:y", 130 - 20, 0.2)
+	tween.tween_property(body, "position:y", 130, 0.2)
 	
-	tween.tween_property(body, "position:y", start_y - 5, 0.1)
-	tween.tween_property(body, "position:y", start_y, 0.1)
+	tween.tween_property(body, "position:y", 130 - 15, 0.15)
+	tween.tween_property(body, "position:y", 130, 0.15)
+	
+	tween.tween_property(body, "position:y", 130 - 5, 0.1)
+	tween.tween_property(body, "position:y", 130, 0.1)
 
 func sink(body):
 	var start_y = body.position.y
 	var tween = create_tween()
 	
-	tween.tween_property(body, "position:y", start_y + 275, 2.0).set_ease(Tween.EASE_OUT)
+	tween.tween_property(body, "position:y", 405, 2.0).set_ease(Tween.EASE_OUT)
 
 func _float(body):
 	var start_a = body.rotation
@@ -80,7 +82,7 @@ func _on_reset_pressed():
 	ro1 = 0
 	ro2 = 0
 	v = 0
-	mass.position = Vector2(510, 130)
+	mass.position = Vector2(510, 200)
 	mass.rotation = 0
 
 func _on_exit_pressed():
